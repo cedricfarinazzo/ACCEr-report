@@ -1,0 +1,55 @@
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome}
+\usepackage{eurosym}
+
+\usepackage[french]{babel}
+
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[left=4cm,right=4cm,top=4.2cm,bottom=4cm,textheight=28cm]{geometry}
+
+\usepackage{eso-pic}
+\usepackage{transparent}
+
+\usepackage{hyperref}
+\usepackage{setspace}
+
+\usepackage{titletoc}
+
+%\usepackage{titlesec}
+%\titleformat{\part}[display]
+  %{\normalfont\bfseries}{}{0pt}{\Large\bfseries}
+
+\newcommand\BackgroundPic{%
+	\put(0,-50){%
+		\parbox[b][\paperheight]{\paperwidth}{%
+			%\vfill
+			\centering
+			\includegraphics[%
+			keepaspectratio]{../images/icone.jpg}%
+			\vfill
+		}
+	}
+}
+
+  
+\renewcommand{\baselinestretch}{1.15}
+\renewcommand{\partname}{}
+
+\title{\textbf{{\Huge Cahier des charges}}}
+\author{
+	\\
+	\bsc{{\LARGE ACCEr}} \\ \\ \\
+	\bsc{CLAUDEL Antoine} \\
+	\bsc{FARINAZZO Cédric} \\
+	\bsc{LANGUERRE Clément} \\
+	\bsc{GRIZZI Edgar} \\ \\ \\
+}
+\date{{\LARGE \today}}
+
+\pagestyle{fancy}
+\fancyfoot[L]{\includegraphics{../images/ShadowMiners_logo_mini.png}} %50x33
+\fancyhead[R]{ACCEr}
+\fancyhead[L]{Cahier des Charges}
