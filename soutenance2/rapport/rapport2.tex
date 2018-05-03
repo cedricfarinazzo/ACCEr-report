@@ -45,7 +45,7 @@
 \author{
 	\\
 	\bsc{{\LARGE ACCEr}} \\ \\
-	\bsc{ShadowMiner} \\ \\ \\
+	\bsc{{\LARGE ShadowMiner}} \\ \\ \\
 	\bsc{CLAUDEL Antoine} \\
 	\bsc{FARINAZZO Cédric} \\
 	\bsc{LANGUERRE Clément} \\
@@ -70,24 +70,20 @@
 \newpage 
 \section{Introduction} 
 \paragraph{} \hspace{0pt} 
-Le projet « ShadowMiner » est un jeu vidéo axé sur l'épouvante produit par le
-groupe ACCEr. Le groupe est composé d'Antoine Claudel, Cédric Farinazzo, Clément Languerre
-et Edgar Grizzi  quatre étudiants en cycle préparatoire
-InfoSup à EPITA. \\ \\
-Le projet a débuté le 1er janvier 2018 et sera terminé en
-juin 2018. \\ \\
-Le jeu vidéo a été conçu à l'aide du framework d'Unity. 
+Le projet « ShadowMiner » est un jeu vidéo d'épouvante conçu par le
+groupe ACCEr. Le groupe est composé d'Antoine CLAUDEL, Cédric FARINAZZO, Clément LANGUERRE
+et Edgar GRIZZI, quatre étudiants en cycle préparatoire InfoSup à EPITA. \\ \\
+Le projet a débuté le 1er janvier 2018 et sera terminé en juin 2018. \\ \\
+Le jeu vidéo a été conçu à l'aide du framework Unity (site web : \url{https://unity3d.com/fr]} ). 
 Ce rapport décrit l'avancement dans la création du jeu de la première soutenance du 16
 mars à la seconde soutenance du 04 mai. \\ \\
 En premier lieu nous aborderons l'avancement général en rappelant les anciens objectifs fixés lors de la
 première soutenance, en indiquant la réussite partielle ou totale de ces
-objectifs et en donnant les nouveaux objectifs pour la dernière soutenance.
+objectifs et en donnant les nouveaux objectifs pour la dernière soutenance. \\
 En second lieu nous mentionnerons les problèmes rencontrés, les apports
-collectifs et individuels du groupe et les points de vue de chacun. Enfin nous
-conclurons ce rapport avec des images provenant du jeu et les sources des
+collectifs et individuels du groupe et les points de vue de chacun. \\
+Enfin nous conclurons ce rapport avec des images provenant du jeu et les sources des
 outils ou médias utilisés dans le cadre du projet.
-
-
 
 
 
@@ -96,48 +92,49 @@ outils ou médias utilisés dans le cadre du projet.
 
 
 
+
 \fancypagestyle{plain}{}
-\part{Avancement générale}  
+\part{Avancement général}  
 \section{Les objectifs remplis} 
 \paragraph{} \hspace{0pt} 
-Entre cette soutenance et la précèdent, nous avons eu plus de temps. Nous avons pu bien avancer notre jeu. \\
-Il a bien évolué depuis la première soutenance où nous avions juste 2 niveaux et un début de multijoueur.
+Entre cette soutenance et la précèdente, nous avons eu plus de temps. Nous avons pu bien avancer notre jeu. \\
+Il a bien évolué depuis la première soutenance où nous avions juste 2 niveaux et un début de multijoueurs.
 Désormais, nous avons un beau menu, avec des niveaux solos, des paramètres fonctionnels et un mode multijoueur amélioré.
 
 {\begin{enumerate}
-	\item Nous avons créé quelques péfabs tels que des clés ou des pépites afin d’améliorer nos niveaux 
+	\item Nous avons créé quelques préfabs tels que des clés ou des pépites d'or afin d’améliorer nos niveaux 
 			et plonger dans un univers ressemblant le plus possible à une mine.	\\
-	\item Nous avons amélioré notre site internet afin de pouvoir créer un pseudo pour chaque utilisateur qui est à bob par défaut.	\\
+	\item Nous avons amélioré notre site internet afin de pouvoir créer un pseudo pour chaque utilisateur qui est Bob par défaut.	\\
 	\item Ainsi nous avons créé un serveur en C\# connecté à la base de données (MySql) du site web \url{https://accer.ddns.net/}
 			et un client en C\# intégré au jeu. 
-			Ce serveur et ce client communique entre eux sur le port 4247 et permettent à l’utilisateur de créer, se connecter ou
+			Ce serveur et ce client communiquent entre eux sur le port 4247 avec le protocole TCP et permettent à l’utilisateur de créer, se connecter ou
 			manager son compte directement depuis le jeu. \\
-			Ainsi les comptes crées depuis le jeu sont aussi accessibles sur le site avec les mêmes identifiants. \\
+			Ainsi les comptes créés depuis le jeu sont aussi accessibles sur le site avec les mêmes identifiants. \\
 	\item Nous avons revu notre menu. Il comporte 6 boutons :
 		{\begin{itemize}
 			\item	Un bouton pour jouer au mode solo
-			\item	Un bouton pour jouer au mode multijoueur
-			\item	Un bouton pour ouvrir le site web dans un navigateur
+			\item	Un bouton pour jouer au mode multijoueurs
+			\item	Un bouton pour ouvrir le site web dans un navigateur web
 			\item	Un bouton pour accéder au menu des comptes
-			\item	Un bouton pour quitter le jeu \\
+			\item	Un bouton pour quitter le jeu. \\
 		\end{itemize}} 
-	\item Un menu des paramètres a été ajouté afin de modifier la qualité des graphismes, la résolution de l’écran, 
-		l’activation ou la du mode plein écran, changer la fréquence d’affichage, de régler la sensibilité de la souris, 
+	\item Un menu des paramètres a été ajouté afin de modifier la qualité des graphismes, la résolution de la fenêtre, 
+		l’activation ou la désactivation du mode plein écran, de changer la fréquence d’affichage, de régler la sensibilité de la souris, 
 		de changer les touches, de changer le volume sonore de la musique et des effets sonores. \\
-	\item Une série de scène permettant de créer, se connecter ou gérer son compte à été créer en lien avec le serveur C\#. \newpage
-	\item En lien avec le menu des paramètres et les scènes permettent de gérer son compte, 
-		nous avons ajouté une série de fonctionnalités permettant ainsi de recharger les données de l’utilisateur au lancement du jeu 
-		et ainsi conserver ces paramètres ou encore sauvegardé le token et l’email permettant la reconnexion au serveur. \\
-	\item Nous nous sommes rendus compte de freeze provoquer par le changement de scène. Nous avons donc une scène 
-		nous permettant charger nos scènes de façons asynchrones et ainsi nous permettent de créer une barre d’avancement. \\
-	\item Un menu des niveaux solo a été créer afin de rejoindre tous les niveaux solos. \\
-	\item Le multiplayer a été revue afin de synchroniser les animations des joueurs et de faciliter la gestion des rooms.
-		Ainsi lorsque qu’on se connecte au serveur multijoueur (Photon), une room est créé dans une scène multijoueur 
-		choisi aléatoirement si aucune room n’est libre. \\
-	\item Un menu pause a été ajouté au miner afin de permettre au joueur de faire une pause ou de retourner au menu. \\
-	\item Une musique de fond et des bruits de pas ont été ajouté au jeu afin de combler le silence. \\
-	\item Nous avons changé le modèle 3D du ShadowMiner monstre) afin de nous permettre de l’intégrer au jeu plus facilement.
-		Une IA a été ajouté sur ce ShadowMiner afin de suivre un joueur lorsque ce dernier s’approche trop ou qu’il passe 
+	\item Une série de scènes permettant de créer son compte ,de s'y connecter ou de le gérer, a été créée en lien avec le serveur C\#. \newpage
+	\item En lien avec le menu des paramètres et les scènes permettant de gérer son compte, 
+		nous avons ajouté une série de fonctionnalités pour recharger les données de l’utilisateur au lancement du jeu 
+		et ainsi conserver ces paramètres ou encore sauvegarder le token et l’email pour la reconnexion au serveur. \\
+	\item Nous nous sommes rendus compte de la présence de ralentissements provoqués par le changement de scène. 
+		Nous avons donc une scène nous permettant de charger nos scènes de façons asynchrones et ainsi afficher une barre d’avancement. \\
+	\item Un menu des niveaux solo a été créé afin de rejoindre tous les niveaux solos. \\
+	\item Le mode multijoueurs a été revu afin de synchroniser les animations des joueurs et de faciliter la gestion des rooms.
+		Ainsi lorsque l'on se connecte au serveur multijoueurs (Photon), une room est créée dans une scène multijoueurs 
+		choisie aléatoirement si aucune room n’est libre. \\
+	\item Un menu pause a été ajouté au mineur afin de permettre au joueur de faire une pause ou de retourner au menu. \\
+	\item Une musique de fond et des bruits de pas ont été ajoutés au jeu afin de combler le silence. \\
+	\item Nous avons changé le modèle 3D du ShadowMiner (monstre) afin de l’intégrer au jeu plus facilement.
+		Une IA a été ajoutée sur ce ShadowMiner pour pouvoir suivre un joueur lorsque ce dernier s’approche trop ou lorqu’il passe 
 		dans le champ de vision du monstre. \\
 
 \end{enumerate}}
@@ -151,79 +148,74 @@ Désormais, nous avons un beau menu, avec des niveaux solos, des paramètres fon
 
 \section{Objectifs futurs jusque la soutenance finale} 
 \paragraph{} \hspace{0pt} 
-L'objectif pour la prochaine soutenance est en priorité de mettre une I.A sur le Shadow Miner, de plus pouvoir l'incarner 
-dans le mode multijoueurs serait une belle avancée pour nous ainsi que pouvoir incarner la mine elle-même aussi serait 
-un bel accomplissement pour nous. \\
+L'objectif pour la prochaine soutenance est en priorité de pouvoir jouer avec le ShadowMiner dans le mode multijoueurs et 
+de pouvoir incarner la mine elle-même. \\
 
-Nous devrons remplir notre objectif de pouvoir rendre de meilleurs graphismes grâce à la modélisation 3D. \\
+Nous devrons remplir notre objectif d'améliorer nos graphismes grâce à la modélisation 3D. \\
 
-%Nous avons comme objectif de finaliser le script C\# animation ainsi que le script C\# joueur. 
-Un des autres principaux objectifs est la cinématique qui est quelque chose auquel nous tenons, que nous avons annoncé, 
-alors nous avons l'objectif de créer cette cinématique. \\
+Un des autres principaux objectifs est la cinématique à laquelle nous tenons et que nous avons annoncée. \\
 
-Certains sons ne sont pas encore mis dans le jeu comme le bruit du mineur quand il se blesse, lors de la dernière soutenance, 
-La tâche du son du jeu sera remplie dans son intégralité. \\
+Certains sons ne sont pas encore mis dans le jeu, comme le bruit du mineur lorqu’il se blesse.
+Lors de la dernière soutenance, le son du jeu sera totalement intégré. \\
 
 Le menu sera entièrement finalisé avec un écran de fin de niveau. \\
 
 Pour notre site internet et dans le jeu, une page de progression sera en lien avec notre jeu. \\
 
-Pour notre serveur multijoueurs notre espérons l'rnvoi et la réception de la progression du joueur ainsi qu’afficher 
-le pseudonyme du joueur au-dessus de celui-ci. \\
-
-Ensuite nous aimerions créer un système qui permet de générer des maps aléatoirement pour le multijoueur qui pour 
-le moment choisi une scène aléatoirement. \\
+Ensuite nous aimerions créer un système qui permet de générer des maps aléatoirement pour le mode multijoueurs, qui pour 
+le moment, choisi une scène aléatoirement. \\
 
 Le dernier objectif serait l'achat d'un CD-ROM, d'une jaquette pour compiler et enregistrer notre jeu sur un CD avec 
-un potentiel livret de conseil d'utilisation. \\
+un livret d'explication pour l'utilisateur. \\
 
 Potentiellement, nous espérons pouvoir créer un éditeur de map et un trailer. \\
 
 Nous prévoyons aussi de chiffrer la connexion avec le serveur C\# afin de renforcer la sécurité.
 
 
+
 \newpage
 
 
 
-
 \fancypagestyle{plain}{}
-\part{Quelques précisions ...}
+\part{Quelques précisions}
 
 \section{Précision sur le fonctionnement du mode solo}
 \paragraph{} \hspace{0pt} \\
-Dans le menu du jeu lorsque le joueur clique sur le bouton « Play offline » il est redirigé vers l'écran de sélection des niveaux. \\
-Il y a pour l'instant 20 niveaux (il y en aura peut-être plus mais ce n'est pas notre priorité) et pour accéder à un niveau 
+Dans le menu du jeu, lorsque le joueur clique sur le bouton « Play offline », il est redirigé vers l'écran de sélection des niveaux. \\
+Il y a pour l'instant 20 niveaux (il y en aura peut-être plus, mais ce n'est pas notre priorité). Pour accéder à un niveau, 
 il faut avoir fini le précédent. \\
 Nous prévoyons donc de griser les boutons reliés aux niveaux inaccessibles et de les rendre inutilisables. 
-Les niveaux en solo sont tous basés sur la même architecture cependant nous prévoyons d'ajouter une différence majeure pour chaque niveau . 
-Pour l'instant nous avons construit 6 niveaux différents. \\
-Nous avons construit de faux sols qui tombent lorsque le joueur marche dessus, 
-ainsi que des portes déguisées en étagères. Il y aura aussi un système de clé pour sortir de certains niveaux (la clé est déjà fabriquée). \\
+Les niveaux en solo sont tous basés sur la même architecture, cependant nous prévoyons d'ajouter une différence majeure pour chaque niveau. 
+Pour l'instant, nous avons construit 6 niveaux différents. \\
+Nous avons construit de faux sols qui tombent, lorsque le joueur marche dessus, 
+ainsi que des portes déguisées en étagères. Il y aura aussi un système de clé pour sortir de certains niveaux (la clé est déjà fabriquée. \\
 Le niveau modèle (qui  sert de base aux 16 autres) commence par un escalier conduisant au couloir principal. 
-Au bout de quelques pas le joueur trouvera une porte à sa droitemenant aux toilettes, s'il continue tout droit il arrivera dans la 
-salle de détente constituée de tables, tabourets, étagères et d'un juke-box (celui ci devra pouvoir lancer ou stopper la musique 
-et peut-être en changer). \\
-Plus loin dans le niveau le joueur trouvera la zone de minage avec des cagettes remplies de pépites d'or et de lanternes. 
-Enfin un escalier de sorti conduira le joueur au niveau suivant.
+Au bout de quelques pas, le joueur trouvera une porte à sa droite menant aux toilettes.
+S'il continue tout droit, il arrivera dans la salle de détente constituée de tables, tabourets, étagères et d'un juke-box 
+(celui-ci devra pouvoir lancer ou stopper la musique et peut-être en changer). \\
+Plus loin dans le niveau, le joueur trouvera la zone de minage avec des cagettes remplies de pépites d'or et de lanternes. 
+Enfin, un escalier de sortie conduira le joueur au niveau suivant.
 
 
 \section{Précision sur le fonctionnement du mode multijoueurs}
 \paragraph{} \hspace{0pt} \\
-Lorsqu’on joue en multijoueur, on est assigné à une room s’il y en a de disponible sinon une room est créé avec une scène choisie aléatoirement. \\
+En mode multijoueurs, le joueur est assigné à une room s’il y en a une de disponible.
+Sinon une room est créée avec une scène choisie aléatoirement. \\
 
-Ensuite l’utilisateur rejoint un lobby jusqu’à ce qu’il y ait 3 joueurs connectés. \\
+Ensuite l’utilisateur rejoint un lobby jusqu’à ce qu’il y ait 3 joueurs connectés dans sa room. \\
 
-Lorsque 3 joueurs sont présents dans la game, ils seront ensuite automatiquement assignés à des rôles : \\ 
+Lorsque 3 joueurs sont présents dans la room, ils seront ensuite automatiquement assignés à des rôles : \\ 
 {\begin{itemize}
 	\item 1 ShadowMiner, 
 	\item 1 miner,
-	\item 1 miner ayant la possibilité de ne pas jouer mais de contrôler la game. \\ 
+	\item 1 miner ayant la possibilité de ne pas jouer mais de contrôler la mine. \\ 
 \end{itemize}} 
 
 Cette partie n’est pas encore implémentée. \\
 
-Ensuite tous les joueurs seront ensuite téléportés dans la game et la partie commence ! \\
+Ensuite tous les joueurs seront téléportés dans la mine et la partie commence ! \\
 Les mineurs doivent se cacher ou courir pour ne pas se faire attaquer par le ShadowMiner.
 Si tous les mineurs sont morts, alors le ShadowMiner gagne.
 A la fin du chronomètre, s’il reste un mineur, alors ce dernier a gagné. \\ \\
@@ -231,60 +223,78 @@ A la fin du chronomètre, s’il reste un mineur, alors ce dernier a gagné. \\ 
 
 \section{Précision sur le site web}
 \paragraph{} \hspace{0pt} \\
+La réalisation du site web a commencé dès le cahier des charges. Il a été codé en PHP Programmation Orienté Objet et 
+est couplé à une base de données MySql. \\
+Ce site est hébergé par Cédric sur un Raspberry Pi 3B+ (héberge aussi le serveur C\# et Epicoin). \\ \\
+
+Le site comporte un système de compte lié au jeu et ainsi permettant de voir sa progression sur le site.
+Il possède aussi un chat en direct permettant à l’utilisateur communiqué. \\ \\
+
+La rubrique ShadowMiner comporte plusieurs sections : \\
+{\begin{itemize}
+	\item Un bref descriptif du projet
+	\item Les sources utilisées
+-	\item Les rapports de soutenances et le cahier des charges
+-	\item La progression actuelle du groupe
+-	\item Un page de téléchargement d’un installeur du jeu
+\end{itemize}} 
+
+
 
 
 
 
 \fancypagestyle{plain}{}
-\part{Apports collectifs et personnels}
+\part{Le groupe face au projet}
+
+\section{Apports collectifs et personnels}
 \paragraph{} \hspace{0pt} \\
-Lors de la première soutenance nous venions seulement de commencer à  programmer en groupe et l’excitation surpassait le reste . 
-C'est seulement durant cette période post-soutenance que nous
-nous sommes rendu compte des vraies difficultés d'un projet en groupe et que l'excitation s’est atténuée. \\
+Lors de la première soutenance, nous venions seulement de commencer à programmer en groupe et l’excitation surpassait le reste . 
+C'est seulement durant cette période post-soutenance que nous nous sommes rendus compte des vraies difficultés 
+d'un projet en groupe et que l'excitation s’est atténuée. \\
 
 \paragraph{} \hspace{0pt} \\
 Les points négatifs :
 {\begin{itemize}
-	\item	Dans un groupe chacun possède sa vision du projet et même si l'on finit toujours par trouver un compromis il arrive parfois que 
-		certaines idées passent à la trappe ou qu'au contraire elles soient mises en place sans l'unanimité des voix.
-		Certains parties réalisées par différentes personnes ne sont pas compatibles entre-elles et il faut les modifier voire totalement 
+	\item	Dans un groupe, chacun possède sa vision du projet et même si l'on finit toujours par trouver un compromis, il arrive parfois que 
+		certaines idées passent soient abandonnés, ou au contraire, elles soient mises en place sans l'unanimité des voix.
+		Certaines parties réalisées par différentes personnes ne sont pas compatibles entre-elles et il faut les modifier, voire totalement 
 		les effacer puis les recréer. \\
 		Tout le monde n'est pas d'accord sur les périodes de travail, or des créneaux de mise en commun
-		et de prévision des tâches sont essentiels pour le groupe, contrairement au projets individuels.
+		et de prévision des tâches sont essentiels pour le groupe, contrairement aux projets individuels.
 		La fatigue entraînée par les longues heures de travail conduit parfois à des petits conflits ou des réflexions désagréables. \\
 \end{itemize}} 
 
 \paragraph{} \hspace{0pt} \\
 Les points positifs :
 {\begin{itemize}
-	\item	Néanmoins le travail en groupe est très enrichissant pour chaque membre car en vérifiant ce que les autres ont produit 
-		on en apprend beaucoup et on peut par la suite réutiliser ce savoir pour sa propre partie. \\
-		Le travail en groupe permet de ne pas perdre un rythme de travail car personne ne souhaite être le poids mort du groupe. 
+	\item	Néanmoins le travail en groupe est très enrichissant pour chaque membre, car en vérifiant ce que les autres ont produit, 
+		chacun apprend beaucoup et peut par la suite réutiliser ce savoir pour sa propre partie. \\
+		Le travail en groupe permet de ne pas perdre un rythme de travail, car personne ne souhaite ralentir le groupe. 
 		Chacun donne donc du sien et fait des efforts pour faire progresser le projet. \\
-		L’entraide est un des plus gros avantages du groupe et il a été utilisé de nombreuses fois. \\
-		La répartition des tâches et aussi un point fort du travail en groupe et nous n'aurions sûrement 
-		pas pu accomplir ce qu'on a fait jusqu'ici seul. \\
+		L’entraide et la coopération sont les des plus gros atouts pour le groupe. \\
+		La répartition des tâches puis le travail en équipe permettent d'accomplir un projet qu'aucun des membres seul n'aurait pu accomplir. \\
 \end{itemize}} 
 
 
 
-
-
-
 \newpage
-\section{Problèmes rencontrées}
+\section{Problèmes rencontrés}
 \paragraph{} \hspace{0pt} \\
-Nous avons rencontré quelques problèmes. Nous avons résolu certains de ces problèmes, les autres seront résolus avant la dernière soutenance.
+Nous avons rencontré quelques problèmes. Nous en avons résolu certains, les autres seront résolus avant la dernière soutenance.
 
 {\begin{itemize}
-	\item Lorsqu’on joue avec le miner, la caméra peut parfois passer à travers les murs. \\
+	\item Lorsqu’on joue avec le mineur, la caméra peut parfois passer à travers les murs. \\
 	\item Dans le menu des paramètres, on ne peut pas assigner les touches de la souris. \\
-	\item Il a été un peu difficile de trouver comment se connecter à la base de données MySql en C\# car 
+	\item Il a été un peu difficile de trouver comment se connecter à la base de données MySql en C\#, car 
 		la documentation et les forums ne sont pas précis. \\
-	\item  On a eu quelques soucis au niveau des cinématiques. En effet, dans le niveau 4, on voulait faire une cinématique de la grille 
-	qui se levait quand on actionnait le levier afin de montrer que le passage était débloqué. D’autres cinématiques nous sommes venus 
-	en tête comme une simple petite cinématique reculée quand on active l’armoire-magique du niveau 3 ou encore montrer l'aparition du 
-	ShadowMiner en début de niveau pour montrer qu'il y a un danger. Ce problème devrait être résolu pour la prochaine fois.
+	\item  Nous avons eu quelques soucis au niveau des cinématiques. En effet, dans le niveau 4, 
+	nous voulions faire une cinématique de la grille 
+	qui se levait quand le joueur actionnait un levier afin de montrer que le passage était débloqué.  \\
+	D’autres cinématiques, nous avons pensé à d'autres cinématiques comme une simple petite cinématique reculée 
+	lorque le joueur active l’armoire-magique du niveau 3, ou encore faire apparaître le 
+	ShadowMiner en début de niveau pour montrer qu'il y a un danger. 
+	Ce problème devrait être résolu pour la prochaine fois.
 \end{itemize}} 
 
 \newpage
@@ -296,34 +306,33 @@ Nous avons rencontré quelques problèmes. Nous avons résolu certains de ces pr
 \part{Avancement Personnel}  
 \section{Antoine}
 \paragraph{} \hspace{0pt} \\
-Depuis la dernière soutenance j'ai créé plusieurs niveaux. 
-Au départ je construisais de nouveau niveaux à partir de rien et cela me prenait beaucoup de temps et d'effort pour au final 
-obtenir quelque chose de très satisfaisant mais également trop rapide à jouer. Par la suite j'ai décidé de créer un seul niveau, 
+Depuis la dernière soutenance, j'ai créé plusieurs niveaux. \\
+Au départ, je construisais de nouveaux niveaux à partir de rien et cela me prenait beaucoup de temps et d'effort pour au final,  
+obtenir quelque chose de très satisfaisant mais également trop rapide à jouer. Par la suite, j'ai décidé de créer un seul niveau, 
 assez garni, qui servira de modèle pour tous les autres et d'ajouter mes précédents « mini-niveaux » dans le modèle. 
-Parmi ces anciens mini-niveaux il y avait un couloir enflammé qui empêche l'accès à la sortie et oblige le joueur à faire un détour, 
+Parmi ces anciens mini-niveaux, il y avait un couloir enflammé qui empêche l'accès à la sortie et oblige le joueur à faire un détour, 
 mais aussi un faux sol qui s’effondre lorsque le joueur passe dessus après avoir aperçu l'ennemi du jeu (le ShadowMiner). J'ai donc 
-utilisé de nombreuses préfabs déjà construites lors de la première soutenance comme les murs et les portes, et de nouvelles préfabs 
+utilisé de nombreux préfabs déjà construits lors de la première soutenance comme les murs, et de nouvelles préfabs 
 comme les pépites dorées et les couloirs (les pépites sont faîtes à partir des cailloux construits sur Blender). Étant responsable du 
-menu du jeu j'ai construit plusieurs interfaces utilisateur, une pour la connexion à son compte, une pour l'inscription, une pour le 
+menu du jeu, j'ai construit plusieurs interfaces utilisateur, une pour la connexion à son compte, une pour l'inscription, une pour le 
 choix des niveaux et une pour l'affichage et l’édition des informations personnelles d'un compte. Comme on peut s'y attendre lorsqu'on 
-éalise son premier jeu vidéo, tout ne s'est pas passé comme prévu et j'ai souvent du modifier voire supprimer certains de mes ajouts. 
-Cédric m'a notamment aidé pour le script en C\# des interactions avec le serveur ainsi que l'optimisation. Lors de cette période suivant 
-la première soutenance j'ai appris que dans un projet, et d'autant plus en informatique, il y a beaucoup de façon d'arriver au même résultat. 
+réalise son premier jeu vidéo, tout ne s'est pas passé comme prévu et j'ai souvent dû modifier voire supprimer certains de mes ajouts. 
+Cédric m'a notamment aidé pour le script en C\# des interactions avec le serveur ainsi que l'optimisation. 
+Lors de cette période suivant la première soutenance j'ai appris que dans un projet, et d'autant plus en informatique, 
+il y a beaucoup de façon d'arriver au même résultat. 
 Cela peut mener à des tensions dans le groupe car chacun veut faire à sa manière mais cela permet aussi d'apprendre les limites de ses méthodes 
-et d’en découvrir des nouvelles parfois plus optimales au final. Pour la prochaine soutenance je me fixe comme objectifs de donner
- une touche personnelle à chaque niveau afin que le joueur ne trouve pas le jeu répétitif. Je devrai parallèlement tenir compte 
- du scénario pour produire des niveaux en rapport avec l'histoire du jeu.
+et d’en découvrir de nouvelles parfois plus optimales. 
+Pour la prochaine soutenance je me fixe comme objectifs de donner
+une touche personnelle à chaque niveau afin que le joueur ne trouve pas le jeu répétitif. Je devrai parallèlement tenir compte 
+du scénario pour produire des niveaux en rapport avec l'histoire du jeu.
 
 
 \newpage
 
 
 
-
-
 \section{Cédric}
 \paragraph{} \hspace{0pt} \\
-Cédric
 
 
 \newpage
@@ -335,30 +344,33 @@ Cédric
 \section{Clément}
 \paragraph{} \hspace{0pt} \\
 A la suite de notre première soutenance, nous avions décidé d'organiser une séance par semaine afin d'avancer efficacement dans notre projet.
- On a pu alors parler des tâches que chacun devait accomplir et parler des mécaniques des prochains niveaux. Le premier niveau que j'avais 
- confectionné était un niveau pour débutant, sans réel intérêt mis à part prendre le jeu en main, découvrir le style de jeu et des mécaniques 
- basiques tels qu'ouvrir une porte, courir ou pousser un rocher pour débloquer un chemin. Par la suite, avec Antoine, nous souhaitions 
- rendre les niveaux plus complexes, avec des petites diffcultés afin de rendre le jeu plus attrayant. Ainsi, mon deuxième fait 
- apparaître le joueur dans une salle qui semblait être une ancienne salle de restauration (ancienne car la mine est abandonnée!). 
- Deux chemins s'offrent à lui, dont un qui lui sera bloqué par des chariots... Vides. Le joueur doit alors emprunter l'autre chemin. 
- Une porte fermé s'offre à lui et doit alors trouver les clefs qui sont dans une autre salle secrète qui se dévoile en débloquant un 
- passage secret. Ce passage secret est cachée par une amoire qui bouge quand on s'approche de cette dernière et en appuyant sur la 
- touche "E" du clavier. J'ai repris le préfab armoir que j'avais confectionné et lui ai implémenté deux animations ainsi qu'un script C\#. 
- Malheureusement, la mécanique de récupérer le trousseau de clé et le stocker dans un inventaire n'a pas encore été faite. 
- Ainsi, le niveau n'est pas terminé à 100\%. 
-Pour le troisième niveau, je voulais commencé à introduir le personnage emblématique du jeu, j'ai nommé le "Shadow Miner",
-controlé par un IA et qui se déplacerait entre deux points  de la map et qui nous poursuivrai s'il nous détecterait. 
+On a pu alors parler des tâches que chacun devait accomplir et parler des mécaniques des prochains niveaux. 
+Le premier niveau, que j'avais confectionné était un niveau pour débutant, sans réel intérêt mis à part prendre le jeu en main,
+découvrir le style de jeu et des mécaniques 
+basiques telles qu'ouvrir une porte, courir ou pousser un rocher pour débloquer un chemin. 
+Par la suite, avec Antoine, nous souhaitions rendre les niveaux plus complexes, avec des petites diffcultés 
+afin de rendre le jeu plus attrayant. 
+Ainsi, mon deuxième niveau fait apparaître le joueur dans une salle qui semblait être une ancienne salle de restauration 
+(ancienne car la mine est abandonnée!). Deux chemins s'offrent à lui, dont un qui lui sera bloqué par des chariots... vides. 
+Le joueur doit alors emprunter l'autre chemin. Une porte fermée s'offre à lui et il doit alors trouver les clefs 
+qui sont dans une autre salle secrète dévoilée en débloquant un passage secret. Ce passage secret est caché 
+par une amoire qui bouge que le joueur s'approche de cette dernière et lorsque'il appuie sur la 
+touche "E" du clavier. J'ai repris le préfab armoire que j'avais confectionné et lui ai implémenté deux animations ainsi qu'un script C\#. 
+Malheureusement, le mécanisme de récupération du trousseau de clé et le stockage dans un inventaire n'ont pas encore été implémentés. 
+Ainsi, le niveau n'est pas terminé à 100\%. 
+Pour le troisième niveau, je voulais commencé à introduire le personnage emblématique du jeu, j'ai nommé le "Shadow Miner",
+controlé par un IA et qui se déplacerait entre deux points de la map et qui poursuivrait le joueur en cas de détection de celui-ci. 
 Le personnage commence dans un des nombreux couloir de cette mine abandonnée et doit aller à l'autre bout. 
 Problème? une grille barre son passage. Il doit alors activer un levier qui se trouve dans le niveau. 
 Mais gare au monstre de la mine qui rode! 
-Le niveau n'est pas à 100\% de ces capacités. L'animation du leveir qui s'abaisse et qui ouvrirait la grille n'est pas encore faite. 
+Le niveau n'est pas à 100\% de ses capacités. L'animation du levier qui s'abaisse et qui ouvrirait la grille, n'est pas encore faite. 
 J'ai créé de nouveaux préfabs comme la clef, le kit "Table + Tabourets" et la grille. Pour la prochaine soutenance, 
-je souhaiterai finir toutes les mécaniques du deuxième et troisième niveau ainsi que d'imaginer d'autres mécaniques qui rendraient
- le jeu plus complexe, travailler sur les cinématiques et sur la confection de nouveau niveau. 
-Notre groupe est toujours aussi bien soudé, nous travaillons souvent ensemble, que ça soit au campus ou par Discord. 
-J'aime particulièrement les moments où Antoine me fait tester ses niveaux et quand je fais tester mes niveaux au groupe; 
-En testant les niveaux d'Antoine , celà me permet aussi d'imaginer d'autres niveaux, et vice-versa. 
-Ce projet permet de nous épanouir psychologiquement, mais aussi à se répartir les tâches et à travailler en groupe.
+je souhaiterais finir toutes les mécaniques du deuxième et troisième niveaux, ainsi qu'imaginer d'autres mécaniques qui rendraient
+le jeu plus complexe. Je prévois aussi de travailler sur les cinématiques et sur la confection de nouveau niveau. 
+Notre groupe est toujours aussi bien soudé, nous travaillons souvent ensemble, que çe soit au campus ou par Discord. 
+J'aime particulièrement les moments où Antoine me fait tester ses niveaux et quand je fais tester mes niveaux au groupe. 
+En testant les niveaux d'Antoine , cela me permet aussi d'imaginer d'autres niveaux, et vice-versa. 
+Ce projet permet de nous épanouir, mais aussi de se répartir les tâches et de travailler en groupe.
 
 \newpage
 
@@ -368,26 +380,21 @@ Ce projet permet de nous épanouir psychologiquement, mais aussi à se répartir
 
 \section{Edgar}
 \paragraph{} \hspace{0pt} \\
-Entre la première et la seconde soutenance Edgar s’est occupé en particulier des sons du jeu. 
-Il a recherché plusieurs sons pour notre personnage de mineur comme des bruits de pas quand il marche des bruit de pas quand il court, 
+Entre la première et la seconde soutenance, Edgar s’est occupé en particulier des sons du jeu. 
+Il a recherché plusieurs sons pour notre personnage de mineur, comme des bruits de pas quand, il marche des bruit de pas quand il court, 
 des bruits quand il se blesse ou encore quand il meurt. Il a aussi recherché des bruits correspondant au Shadow Miner. 
-Certains pour lui n’était pas assez bon pour le jeu donc il en a enregistré deux avec son téléphone. 
-D’autres son été inaccessible au niveau de la tonalité, un changement de tonalité s'imposait alors il a utilisé Audacity pour 
-s’occuper justement des effets sonores pour qu’il y ait une bonne tonalité aux sons de notre jeu, pour qu’il soit d’une assez bonne 
-vitesse pour correspondre aux animations. Il a aussi aidé à trouver une musique de fond pour le jeu qui a été composé par Nicolas 
-Masciocchi qui nous donne généreusement sa musique. Cette musique ensuite été découpé pour être utilisé pour plusieurs endroits ou 
-parties de jeu comme la fin d’un niveau ou la musique de fond dans le menu. 
+Certains pour lui n’était pas assez bons pour le jeu donc il en a enregistré deux autres avec son téléphone. 
+D’autres sons ont été inaccessible au niveau de la tonalité. Un changement de tonalité s'imposait alors il a utilisé Audacity pour 
+s’occuper justement des effets sonores pour qu’il y ait une bonne tonalité et que la vitesse soit ajusté aux animations. 
+Il a aussi aidé à trouver une musique de fond pour le jeu qui a été composée par Nicolas Masciocchi 
+qui nous donne généreusement sa musique. Cette musique a ensuite été découpée pour être utilisée en endroits du jeu
+comme la fin d’un niveau ou la musique de fond dans le menu. 
 
-Edgar s’est renseigné aussi pour la création d’un système qui permettrait de générer des maps aléatoirement sans résultats positifs. 
+Edgar s’est renseigné aussi pour la création d’un système qui permettrait de générer des maps aléatoirement mais sans succès. 
 
-Il a particulièrement apprécié s'occuper du son du jeu car il trouve ça extrêmement intéressant et c’est pour ça qu’il était motivé 
-pour obtenir les meilleurs résultats possibles et qui selon lui était meilleur pour le jeu comme des bruits de pas bien synchronisée 
-à l’animation de notre mineur. Edgar est toujours très motivé pour le projet et montre que ce jeu lui tient à cœur, qu'il fait 
-ce qu’il apprécie dans un groupe qui communique et travaille bien.
-
-
-
-
+Il a particulièrement apprécié de s'occuper du son du jeu car il trouve cela extrêmement intéressant.
+Edgar est toujours très motivé pour le projet et montre que ce jeu lui tient à cœur.
+Il apprécie de participer au groupe qui communique et travaille bien.
 
 
 
@@ -395,7 +402,7 @@ ce qu’il apprécie dans un groupe qui communique et travaille bien.
 \fancypagestyle{plain}{}
 \part{Organisation du projet}
 \paragraph{} \hspace{0pt} \\ 
-Nous avons jugé utile de mettre à jour ce tableau de répartition des tâches
+Nous avons jugé utile de mettre à jour ce tableau de répartition des tâches.
 \\ \\
 {\normalsize
 	\begin{tabular}{|p{6cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|}
@@ -441,7 +448,7 @@ Nous avons jugé utile de mettre à jour ce tableau de répartition des tâches
 	\end{tabular}
 	\label{repartition}		
 	\footnotetext[1]{Responsable}
-	\footnotetext[2]{Suppléant}
+	\footnotetext[2]{Suppléant \\}
 }
 
 
@@ -452,11 +459,11 @@ Nous avons jugé utile de mettre à jour ce tableau de répartition des tâches
 \fancypagestyle{plain}{}
 \part{Quelques sources ...}
 \paragraph{} \hspace{0pt} \\ 
-N'etant pas des experts en modélisation 3D, nous avons du trouvé nos personnages sur internet : 
+N'etant pas des experts en modélisation 3D, nous avons dû trouver nos personnages sur internet : 
 {\begin{itemize}
-	\item Le mineur provient des standarts assets de Unity 4.x, nous avons juste récupéré le modele 3D et les animations. 
-	car nous n'avons pas le droit de récupérer de script et que les scripts de l'assets étaient en Javascript(Unityscript).
-	\item les textures sur les objet et les sols proviennent de l'Assets Store.
+	\item Le mineur provient des standarts assets de Unity 4.x, nous avons juste récupéré le modele 3D et les animations, 
+	car nous n'avons pas le droit de récupérer de script. De plus, les scripts de l'assets étaient en Javascript(Unityscript).
+	\item les textures sur les objets et les sols proviennent de l'Assets Store ainsi que le mode modèle 3D du ShadowMiner.
 \end{itemize}}
 
 
@@ -467,14 +474,14 @@ N'etant pas des experts en modélisation 3D, nous avons du trouvé nos personnag
 \newpage
 \fancypagestyle{plain}{}
 \part{Conclusion}
-Notre groupe est soudé et bien organisé. La majorité des tâches que l’on s’était assigné a été remplit. 
+Notre groupe est soudé et bien organisé. La majorité des tâches que nous nous étions assignés, a été remplie. 
 Notre mineur a de nouvelles animations et est plus fluide. Les niveaux seront plus complexes par la suite avec l’implémentation du ShadowMiner, 
 de nouveaux pièges et de nouvelles énigmes. Tous les préfabs ont été créés à l’exception des rails que nous prévoyons de créer pour la prochaine fois.  \\ \\
 
 Nous comptons continuer la création de niveaux, créer de nouveaux pièges (et donc de nouvelles animations), réussir à faire des cinématiques 
 pour rendre les niveaux plus dynamiques, sauvegarder la progression et travailler sur le ShadowMiner. \\ \\
 
-Nous sommes toujours aussi motivé à finir notre jeu et à réussir à produire ce que nous cherchons depuis le début : faire peur ! \\ 
+Nous sommes toujours aussi motivés pour finir notre jeu et pour réussir à produire ce que nous cherchons depuis le début : faire peur ! \\ 
 
 
 \end{document}
