@@ -1,4 +1,4 @@
-\documentclass[titlepage, 13px, a4paper]{article}
+\documentclass[titlepage, 13px, a4paper]{report}
 
 \usepackage[utf8]{inputenc}
 
@@ -70,33 +70,33 @@
 \newpage 
 \section{Introduction} 
 \paragraph{} \hspace{0pt} 
-Comme chaque année à Epita, les groupes doivent créer un rapport de soutenance pour chaque soutenance. \\
-Dès la validation de notre cahier des charges nous avons imaginé nos mineurs prendre vie ainsi que le naissance du vil "Shadow Miner", monstre de notre jeu et ennemi de nos ou notre mineur(s).
-Ce projet a pour but de réaliser un jeu vidéo. \\
-Notre projet est divisé en trois soutenances distinctes. Nous réalisons notre projet avec Unity 3D et en c\#.
-Nous allons vous présenter le rapport de notre première soutenance de ce projet décrivant notre premier pas dans le monde de la programmation et de jeu vidéo 
-ainsi nous retracerons l'avancée de notre projet depuis la validation de notre cahier des charges qui a eu lieu il y a environ un mois et demi. 
-Notre projet est constitué d'Edgar Grizzi, Clément Languerre, Cédric farinazzo et Antoine Claudel.
-Pour vous rappeler un petit peu, notre jeu est un jeu aventure survie à l'intérieur d'une mine ou notre héros un mineur doit s'échapper d'une mine 
-alors qu'il est poursuivi par un monstre, Le shadow miner.
-Notre jeu est constitué d'un mode solo composé d'une série de niveau et d'un mode multijoueurs où 3 joueurs s'affrontent : 
-1 Shadow Miner et 2 mineurs dont un ayant la possibilité de devenir un esprit de la mine pour prendre son contrôle.
+Le projet « ShadowMiner » est un jeu vidéo axé sur l'épouvante produit par le
+groupe ACCEr. Le groupe est composé d'Antoine Claudel, Cédric Farinazzo, Clément Languerre
+et Edgar Grizzi  quatre étudiants en cycle préparatoire
+InfoSup à EPITA. \\ \\
+Le projet a débuté le 1er janvier 2018 et sera terminé en
+juin 2018. \\ \\
+Le jeu vidéo a été conçu à l'aide du framework d'Unity. 
+Ce rapport décrit l'avancement dans la création du jeu de la première soutenance du 16
+mars à la seconde soutenance du 04 mai. \\ \\
+En premier lieu nous aborderons l'avancement général en rappelant les anciens objectifs fixés lors de la
+première soutenance, en indiquant la réussite partielle ou totale de ces
+objectifs et en donnant les nouveaux objectifs pour la dernière soutenance.
+En second lieu nous mentionnerons les problèmes rencontrés, les apports
+collectifs et individuels du groupe et les points de vue de chacun. Enfin nous
+conclurons ce rapport avec des images provenant du jeu et les sources des
+outils ou médias utilisés dans le cadre du projet.
 
 
 
 
-\section{Contexte} 
-\paragraph{} \hspace{0pt} 
-Ce projet est réalisé dans le cadre de la mise en oeuvre des connaissances acquises 
-lors des cours de TD et TP informatiques et nous permet de renforcer et d’approfondir nos apprentissages.   
-Actuellement, notre groupe est sur le point de passer la première soutenance.
+
 
 \newpage
 
 
 
-
-
+\fancypagestyle{plain}{}
 \part{Avancement générale}  
 \section{Les objectifs remplis} 
 \paragraph{} \hspace{0pt} 
@@ -143,6 +143,7 @@ Désormais, nous avons un beau menu, avec des niveaux solos, des paramètres fon
 \end{enumerate}}
 
 
+
 \newpage
 
 
@@ -178,34 +179,63 @@ un potentiel livret de conseil d'utilisation. \\
 
 Potentiellement, nous espérons pouvoir créer un éditeur de map et un trailer. \\
 
+Nous prévoyons aussi de chiffrer la connexion avec le serveur C\# afin de renforcer la sécurité.
+
 
 \newpage
 
 
 
 
-
+\fancypagestyle{plain}{}
 \part{Quelques précisions ...}
+
+\section{Précision sur le fonctionnement du mode solo}
+\paragraph{} \hspace{0pt} \\
+Dans le menu du jeu lorsque le joueur clique sur le bouton « Play offline » il est redirigé vers l'écran de sélection des niveaux. \\
+Il y a pour l'instant 20 niveaux (il y en aura peut-être plus mais ce n'est pas notre priorité) et pour accéder à un niveau 
+il faut avoir fini le précédent. \\
+Nous prévoyons donc de griser les boutons reliés aux niveaux inaccessibles et de les rendre inutilisables. 
+Les niveaux en solo sont tous basés sur la même architecture cependant nous prévoyons d'ajouter une différence majeure pour chaque niveau . 
+Pour l'instant nous avons construit 6 niveaux différents. \\
+Nous avons construit de faux sols qui tombent lorsque le joueur marche dessus, 
+ainsi que des portes déguisées en étagères. Il y aura aussi un système de clé pour sortir de certains niveaux (la clé est déjà fabriquée). \\
+Le niveau modèle (qui  sert de base aux 16 autres) commence par un escalier conduisant au couloir principal. 
+Au bout de quelques pas le joueur trouvera une porte à sa droitemenant aux toilettes, s'il continue tout droit il arrivera dans la 
+salle de détente constituée de tables, tabourets, étagères et d'un juke-box (celui ci devra pouvoir lancer ou stopper la musique 
+et peut-être en changer). \\
+Plus loin dans le niveau le joueur trouvera la zone de minage avec des cagettes remplies de pépites d'or et de lanternes. 
+Enfin un escalier de sorti conduira le joueur au niveau suivant.
+
 
 \section{Précision sur le fonctionnement du mode multijoueurs}
 \paragraph{} \hspace{0pt} \\
-Nous avons souhaité ajouté quelques précisions sur le mode multijoueurs :
-\\
-{\begin{enumerate}
-	\item Nous utilisons Photon Unity Networking pour le multijoueurs.
-		\\
-	\item Le joueur devra créer un compte pour pouvoir accéder au mode multijoueurs.
-			Ce compte pourra être créer sur le site internet ou dans le jeu lui-même
-			Ainsi le joueur pourra consulter et modifier ses données depuis le site internet ou le jeu.
-			Ce système lui permet de jouer sur une version éxécutable du jeu comme sur la version web du jeu en conservant ses données.
-			Ainsi la portabilité et l'accessibilité du jeu en seront augmentée.
-		\\
-	\item Etant donné le nombre de joueur pouvant être connecté au serveur (20 joueurs max), donc nous prévoyons 6 rooms de jeu avec des maps aléatoires.
-		\\
-\end{enumerate}}
+Lorsqu’on joue en multijoueur, on est assigné à une room s’il y en a de disponible sinon une room est créé avec une scène choisie aléatoirement. \\
+
+Ensuite l’utilisateur rejoint un lobby jusqu’à ce qu’il y ait 3 joueurs connectés. \\
+
+Lorsque 3 joueurs sont présents dans la game, ils seront ensuite automatiquement assignés à des rôles : \\ 
+{\begin{itemize}
+	\item 1 ShadowMiner, 
+	\item 1 miner,
+	\item 1 miner ayant la possibilité de ne pas jouer mais de contrôler la game. \\ 
+\end{itemize}} 
+
+Cette partie n’est pas encore implémentée. \\
+
+Ensuite tous les joueurs seront ensuite téléportés dans la game et la partie commence ! \\
+Les mineurs doivent se cacher ou courir pour ne pas se faire attaquer par le ShadowMiner.
+Si tous les mineurs sont morts, alors le ShadowMiner gagne.
+A la fin du chronomètre, s’il reste un mineur, alors ce dernier a gagné. \\ \\
+
+
+\section{Précision sur le site web}
+\paragraph{} \hspace{0pt} \\
 
 
 
+
+\fancypagestyle{plain}{}
 \part{Apports collectifs et personnels}
 \paragraph{} \hspace{0pt} \\
 Lors de la première soutenance nous venions seulement de commencer à  programmer en groupe et l’excitation surpassait le reste . 
@@ -242,17 +272,27 @@ Les points positifs :
 
 
 \newpage
-\part{Problèmes rencontrées et sources }
 \section{Problèmes rencontrées}
 \paragraph{} \hspace{0pt} \\
-Nous n'avons pas rencontré de problème majeurs mis à part que le network n'est pas fluide (nous trouverons une solution bientôt) 
-et que lors d'un changement de scène la directionnel light ne s'active pas, du coup nous avons créé une seconde directionnel light pour patcher ce bug et ca marche !
+Nous avons rencontré quelques problèmes. Nous avons résolu certains de ces problèmes, les autres seront résolus avant la dernière soutenance.
+
+{\begin{itemize}
+	\item Lorsqu’on joue avec le miner, la caméra peut parfois passer à travers les murs. \\
+	\item Dans le menu des paramètres, on ne peut pas assigner les touches de la souris. \\
+	\item Il a été un peu difficile de trouver comment se connecter à la base de données MySql en C\# car 
+		la documentation et les forums ne sont pas précis. \\
+	\item  On a eu quelques soucis au niveau des cinématiques. En effet, dans le niveau 4, on voulait faire une cinématique de la grille 
+	qui se levait quand on actionnait le levier afin de montrer que le passage était débloqué. D’autres cinématiques nous sommes venus 
+	en tête comme une simple petite cinématique reculée quand on active l’armoire-magique du niveau 3 ou encore montrer l'aparition du 
+	ShadowMiner en début de niveau pour montrer qu'il y a un danger. Ce problème devrait être résolu pour la prochaine fois.
+\end{itemize}} 
 
 \newpage
 
 
 
 
+\fancypagestyle{plain}{}
 \part{Avancement Personnel}  
 \section{Antoine}
 \paragraph{} \hspace{0pt} \\
@@ -283,52 +323,7 @@ et d’en découvrir des nouvelles parfois plus optimales au final. Pour la proc
 
 \section{Cédric}
 \paragraph{} \hspace{0pt} \\
-Dès le commencement du projet, j’ai beaucoup travaillé pour trouver des idées pour le groupe.
-J’ai appris rapidement à utiliser \LaTeX afin de rédiger le cahier des charges.
-Dès le début du projet, je me suis appliqué à la réalisation du site web en PHP. 
-Etant donné le fait que les offres d’hébergements ne nous convenaient pas, 
-nous avons décidé de l’héberger nous-même ! Ainsi j’héberge le site internet sur un Raspberry PI 3. 
-Je n’ai pas rencontré de problèmes mis à part qu’il a fallu trouver une solution pour faire tenir le câble Ethernet …
-
-\paragraph{} \hspace{0pt} \\
-Dès la fin du cahier des charges, j’ai créé le projet sous Unity et ai commencé à travailler.
-J’ai tous d’abord commencé à organiser notre projet en créant des dossiers pour ranger nos scripts, 
-nos modèles 3D, nos textures, nos scènes …
-J’ai ensuite créé une porte avec son animation. J’ai eu un peu de mal à trouver comment fonctionnait 
-le menu Animation d’Unity mais je me suis vite habitué et j’ai pu montrer comment créer une animation 
-aux autres membres du groupe. J’ai ensuite créé un script pour ouvrir et fermer la porte : 
-il suffisait de jouer l’animation pour permettre ces opérations.
-Grâce à un collider sphérique attaché à la porte avec IsTrigger coché j’ai pu détecter 
-si un joueur était dans ce collider (OnTriggerStay()) et donc si il pressait la touche E j’activait la dite porte.
-Ensuite je me suis appliqué à la création du mineur puisque Edgar ne peut faire fonctionner Unity 
-et que Clément avait un problème d’écran d’ordinateur. Le plus dur a été de trouver notre mineur !
-La création du script pour le contrôle des mouvements était relativement simple puisque des fonctions 
-comme Input.GetKey() permettent de savoir si la touche passée en paramètre est pressée !
-Le script et le mineur créé, j’ai créé 2 joueurs :
-{\begin{itemize}
-	\item Le premier avec une vue à la troisième personne qui servira pour les cinématiques et quelques niveaux
-	\item Un autre en vue à la première personne pour les niveaux  
-\end{itemize}}
-
-\paragraph{} \hspace{0pt} \\
-J’ai ensuite commencé à m’intéresser au Network et j’ai installé Photon Unity Networking, 
-J’ai ensuite tenté de créer le script du Network Manger. Après quelques heures de doute, 
-nous avons pu jouer à plusieurs ! Bien que les animations ne soient pas synchronisées et que le rendu visuel des autres joueurs est un peu décalé et saccadé, cela fonctionne et nous réglerons ces problèmes plus tard.
-Etant chef de projet, j’ai dû attribuer des tâches à chacun. 
-Les troupes ont eu un peu de retard à l’allumage mais ils y sont mis vraiment début mai 
-même si certains cherchaient toujours une issue pour éviter les tâches que je leur donnais.
-Mais finalement, j’ai réussi à faire en sorte que nous soyons dans les temps !
-J’ai aussi beaucoup aidé mes collègues à utiliser Unity ou à comprendre comment fonctionne les scripts C\# dans Unity.
-\\
-Cette première partie du projet m’as permis de découvrir le rôle de chef de projet.
-
-
-\begin{center}
-	\begin{figure}[!hp]
-	   \includegraphics[width=10cm]{networkcs-game.png}
-	\end{figure}
-	Le script permmetant de se connecter au serveur multijoueur.
-\end{center}
+Cédric
 
 
 \newpage
@@ -350,13 +345,13 @@ A la suite de notre première soutenance, nous avions décidé d'organiser une s
  passage secret. Ce passage secret est cachée par une amoire qui bouge quand on s'approche de cette dernière et en appuyant sur la 
  touche "E" du clavier. J'ai repris le préfab armoir que j'avais confectionné et lui ai implémenté deux animations ainsi qu'un script C\#. 
  Malheureusement, la mécanique de récupérer le trousseau de clé et le stocker dans un inventaire n'a pas encore été faite. 
- Ainsi, le niveau n'est pas terminé à 100%. 
+ Ainsi, le niveau n'est pas terminé à 100\%. 
 Pour le troisième niveau, je voulais commencé à introduir le personnage emblématique du jeu, j'ai nommé le "Shadow Miner",
 controlé par un IA et qui se déplacerait entre deux points  de la map et qui nous poursuivrai s'il nous détecterait. 
 Le personnage commence dans un des nombreux couloir de cette mine abandonnée et doit aller à l'autre bout. 
 Problème? une grille barre son passage. Il doit alors activer un levier qui se trouve dans le niveau. 
 Mais gare au monstre de la mine qui rode! 
-Le niveau n'est pas à 100% de ces capacités. L'animation du leveir qui s'abaisse et qui ouvrirait la grille n'est pas encore faite. 
+Le niveau n'est pas à 100\% de ces capacités. L'animation du leveir qui s'abaisse et qui ouvrirait la grille n'est pas encore faite. 
 J'ai créé de nouveaux préfabs comme la clef, le kit "Table + Tabourets" et la grille. Pour la prochaine soutenance, 
 je souhaiterai finir toutes les mécaniques du deuxième et troisième niveau ainsi que d'imaginer d'autres mécaniques qui rendraient
  le jeu plus complexe, travailler sur les cinématiques et sur la confection de nouveau niveau. 
@@ -397,6 +392,7 @@ ce qu’il apprécie dans un groupe qui communique et travaille bien.
 
 
 \newpage
+\fancypagestyle{plain}{}
 \part{Organisation du projet}
 \paragraph{} \hspace{0pt} \\ 
 Nous avons jugé utile de mettre à jour ce tableau de répartition des tâches
@@ -453,6 +449,7 @@ Nous avons jugé utile de mettre à jour ce tableau de répartition des tâches
 
 
 \newpage
+\fancypagestyle{plain}{}
 \part{Quelques sources ...}
 \paragraph{} \hspace{0pt} \\ 
 N'etant pas des experts en modélisation 3D, nous avons du trouvé nos personnages sur internet : 
@@ -468,14 +465,16 @@ N'etant pas des experts en modélisation 3D, nous avons du trouvé nos personnag
 
 
 \newpage
-
+\fancypagestyle{plain}{}
 \part{Conclusion}
-Nous avons bien avancé et nous avons remplis nos objectifs.
-Les personnage sont en place ainsi que 2 niveaux et le multijoueur.
-\\ \\
-Nous comptons donc continue dans cette voie en continuant le multijour, la création de préfabs, la modélisation 3D d'objets, 
-la création du profile du joueur et de la sauvegarde de sa progression.
-\\ \\
-Ce projet nous tient tous à coeur et nous voulons nous dépasser afin d'obtenir ce que nous voulons ! 
+Notre groupe est soudé et bien organisé. La majorité des tâches que l’on s’était assigné a été remplit. 
+Notre mineur a de nouvelles animations et est plus fluide. Les niveaux seront plus complexes par la suite avec l’implémentation du ShadowMiner, 
+de nouveaux pièges et de nouvelles énigmes. Tous les préfabs ont été créés à l’exception des rails que nous prévoyons de créer pour la prochaine fois.  \\ \\
+
+Nous comptons continuer la création de niveaux, créer de nouveaux pièges (et donc de nouvelles animations), réussir à faire des cinématiques 
+pour rendre les niveaux plus dynamiques, sauvegarder la progression et travailler sur le ShadowMiner. \\ \\
+
+Nous sommes toujours aussi motivé à finir notre jeu et à réussir à produire ce que nous cherchons depuis le début : faire peur ! \\ 
+
 
 \end{document}
