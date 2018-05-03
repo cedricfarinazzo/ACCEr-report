@@ -225,7 +225,7 @@ A la fin du chronomètre, s’il reste un mineur, alors ce dernier a gagné. \\ 
 \paragraph{} \hspace{0pt} \\
 La réalisation du site web a commencé dès le cahier des charges. Il a été codé en PHP Programmation Orienté Objet et 
 est couplé à une base de données MySql. \\
-Ce site est hébergé par Cédric sur un Raspberry Pi 3B+ (héberge aussi le serveur C\# et Epicoin). \\ \\
+Ce site est hébergé par Cédric sur un Raspberry Pi 3B+ (héberge aussi le serveur C\#). \\ \\ % et Epicoin). \\ \\
 
 Le site comporte un système de compte lié au jeu et ainsi permettant de voir sa progression sur le site.
 Il possède aussi un chat en direct permettant à l’utilisateur communiqué. \\ \\
@@ -308,20 +308,24 @@ Nous avons rencontré quelques problèmes. Nous en avons résolu certains, les a
 \paragraph{} \hspace{0pt} \\
 Depuis la dernière soutenance, j'ai créé plusieurs niveaux. \\
 Au départ, je construisais de nouveaux niveaux à partir de rien et cela me prenait beaucoup de temps et d'effort pour au final,  
-obtenir quelque chose de très satisfaisant mais également trop rapide à jouer. Par la suite, j'ai décidé de créer un seul niveau, 
+obtenir quelque chose de très satisfaisant mais également trop rapide à jouer. \\
+Par la suite, j'ai décidé de créer un seul niveau, 
 assez garni, qui servira de modèle pour tous les autres et d'ajouter mes précédents « mini-niveaux » dans le modèle. 
 Parmi ces anciens mini-niveaux, il y avait un couloir enflammé qui empêche l'accès à la sortie et oblige le joueur à faire un détour, 
 mais aussi un faux sol qui s’effondre lorsque le joueur passe dessus après avoir aperçu l'ennemi du jeu (le ShadowMiner). J'ai donc 
 utilisé de nombreux préfabs déjà construits lors de la première soutenance comme les murs, et de nouvelles préfabs 
-comme les pépites dorées et les couloirs (les pépites sont faîtes à partir des cailloux construits sur Blender). Étant responsable du 
-menu du jeu, j'ai construit plusieurs interfaces utilisateur, une pour la connexion à son compte, une pour l'inscription, une pour le 
-choix des niveaux et une pour l'affichage et l’édition des informations personnelles d'un compte. Comme on peut s'y attendre lorsqu'on 
-réalise son premier jeu vidéo, tout ne s'est pas passé comme prévu et j'ai souvent dû modifier voire supprimer certains de mes ajouts. 
+comme les pépites dorées et les couloirs (les pépites sont faîtes à partir des cailloux construits sur Blender). \\ \\
+
+Étant responsable du menu du jeu, j'ai construit plusieurs interfaces utilisateur, une pour la connexion à son compte, 
+une pour l'inscription, une pour le choix des niveaux et une pour l'affichage et l’édition des informations personnelles d'un compte. 
+Comme on peut s'y attendre lorsqu'on réalise son premier jeu vidéo, tout ne s'est pas passé comme prévu et j'ai souvent dû modifier 
+voire supprimer certains de mes ajouts.  \\
 Cédric m'a notamment aidé pour le script en C\# des interactions avec le serveur ainsi que l'optimisation. 
 Lors de cette période suivant la première soutenance j'ai appris que dans un projet, et d'autant plus en informatique, 
-il y a beaucoup de façon d'arriver au même résultat. 
+il y a beaucoup de façon d'arriver au même résultat.  \\
 Cela peut mener à des tensions dans le groupe car chacun veut faire à sa manière mais cela permet aussi d'apprendre les limites de ses méthodes 
-et d’en découvrir de nouvelles parfois plus optimales. 
+et d’en découvrir de nouvelles parfois plus optimales. \\ \\
+
 Pour la prochaine soutenance je me fixe comme objectifs de donner
 une touche personnelle à chaque niveau afin que le joueur ne trouve pas le jeu répétitif. Je devrai parallèlement tenir compte 
 du scénario pour produire des niveaux en rapport avec l'histoire du jeu.
@@ -333,6 +337,41 @@ du scénario pour produire des niveaux en rapport avec l'histoire du jeu.
 
 \section{Cédric}
 \paragraph{} \hspace{0pt} \\
+Depuis la dernière soutenance, j'ai amélioré le site pour permettre à l’utilisateur de changer son pseudo. \\ \\
+
+J’ai ensuite créé un serveur en C\# et un client. Je me suis inspiré du TP C\# numéro 13 après avoir compris son fonctionnement. Le serveur écoute donc sur le port 4247 et est relié à la même base de données que le site web. J’ai ensuite mis en place le serveur et j’ai aidé Antoine à utiliser le client.
+Cela a été une réussite puisque la gestion des comptes depuis le jeu fonctionne parfaitement. \\
+Nous voulions pouvoir afficher et modifier l’image de profil de l’utilisateur directement depuis le jeu, 
+mais l’affichage de Bitmap dans Unity ne fonctionne pas. Nous avons donc abandonné cette idée mais le 
+changement d’image de profil fonctionne sur le site web. \\ \\
+
+
+J’ai ensuite voulu résoudre le problème de la téléportation des joueurs en mode multijoueurs. 
+Après quelques recherches sur Internet, j’ai réussi à résoudre ce problème. \\
+Sur cette lancé, j’ai tenté de synchroniser les animations du joueur en mode multijoueurs. 
+Or Photon utilise un composant Photon Animator View et Animator pour synchroniser les animations, notre joueur utilisait un composant Animation. J’ai donc créé un Animator Controller afin de recréer le système d’animation. J’en ai profité pour ajouter une animation de saut.
+Travaillant déjà sur le mode multijoueur, j’ai approfondi notre système afin de créer 
+des rooms sur des scènes choisi aléatoirement comme expliquer dans la partie sur les tâches accomplies. \\ \\
+
+
+J’ai ensuite créé une scène de chargement avec une barre de progression permettant de faire patienter 
+l’utilisateur pendant le chargement de scène un peu trop lourde. \\
+J’ai ensuite créé un menu des paramètres pour nous permettre de modifier les graphismes, la résolution, 
+la fréquence, la sensibilité, les touches et le volume sonore. \\
+Ayant compris comment fonctionnait les canvas et les UI, j’ai créé un menu pause permettant au joueur 
+de reprendre le jeu ou de retourner au menu principal. \\ \\
+
+
+Je me suis ensuite occupé du ShadowMiner et changer le modèle 3D pour un monstre vert car l’ancien modèle 
+était blanc dans Unity mais comportait bien des couleurs dans d’autres éditeurs. \\
+J’ai ensuite créé l’Animator Controller de ce monstre vert que nous n’avons pas ajouté au Shadow Miner … \\
+J’ai ensuite tenté de créer l’IA du Shadow Miner, après quelques heures de travail et l’utilisation d’un Nav Mesh Agent 
+et d’un Collider, le Shadow Miner suit les joueurs lorsqu’il les détecte. \\
+J’ai ensuite débuggé au maximum le jeu en demandant aux autres membres du groupe de me rapporter les bugs qu’ils trouvaient. \\ \\
+
+Pour la prochaine soutenance, je souhaite créer le système permettant de sauvegarder la progression et de l’envoyer au 
+serveur ainsi que créer le script permettant de contrôler le ShadowMiner comme pour le mineur et ainsi finaliser le multijoueur. \\
+
 
 
 \newpage
@@ -340,16 +379,16 @@ du scénario pour produire des niveaux en rapport avec l'histoire du jeu.
 
 
 
-
 \section{Clément}
 \paragraph{} \hspace{0pt} \\
 A la suite de notre première soutenance, nous avions décidé d'organiser une séance par semaine afin d'avancer efficacement dans notre projet.
-On a pu alors parler des tâches que chacun devait accomplir et parler des mécaniques des prochains niveaux. 
+On a pu alors parler des tâches que chacun devait accomplir et parler des mécaniques des prochains niveaux. \\ \\
+
 Le premier niveau, que j'avais confectionné était un niveau pour débutant, sans réel intérêt mis à part prendre le jeu en main,
-découvrir le style de jeu et des mécaniques 
-basiques telles qu'ouvrir une porte, courir ou pousser un rocher pour débloquer un chemin. 
+découvrir le style de jeu et des mécaniques basiques telles qu'ouvrir une porte, courir ou pousser un rocher pour débloquer un chemin. \\
 Par la suite, avec Antoine, nous souhaitions rendre les niveaux plus complexes, avec des petites diffcultés 
-afin de rendre le jeu plus attrayant. 
+afin de rendre le jeu plus attrayant. \\ \\
+
 Ainsi, mon deuxième niveau fait apparaître le joueur dans une salle qui semblait être une ancienne salle de restauration 
 (ancienne car la mine est abandonnée!). Deux chemins s'offrent à lui, dont un qui lui sera bloqué par des chariots... vides. 
 Le joueur doit alors emprunter l'autre chemin. Une porte fermée s'offre à lui et il doit alors trouver les clefs 
@@ -357,17 +396,20 @@ qui sont dans une autre salle secrète dévoilée en débloquant un passage secr
 par une amoire qui bouge que le joueur s'approche de cette dernière et lorsque'il appuie sur la 
 touche "E" du clavier. J'ai repris le préfab armoire que j'avais confectionné et lui ai implémenté deux animations ainsi qu'un script C\#. 
 Malheureusement, le mécanisme de récupération du trousseau de clé et le stockage dans un inventaire n'ont pas encore été implémentés. 
-Ainsi, le niveau n'est pas terminé à 100\%. 
+Ainsi, le niveau n'est pas terminé à 100\%. \\ \\
+
 Pour le troisième niveau, je voulais commencé à introduire le personnage emblématique du jeu, j'ai nommé le "Shadow Miner",
 controlé par un IA et qui se déplacerait entre deux points de la map et qui poursuivrait le joueur en cas de détection de celui-ci. 
 Le personnage commence dans un des nombreux couloir de cette mine abandonnée et doit aller à l'autre bout. 
 Problème? une grille barre son passage. Il doit alors activer un levier qui se trouve dans le niveau. 
-Mais gare au monstre de la mine qui rode! 
+Mais gare au monstre de la mine qui rode! \\
 Le niveau n'est pas à 100\% de ses capacités. L'animation du levier qui s'abaisse et qui ouvrirait la grille, n'est pas encore faite. 
-J'ai créé de nouveaux préfabs comme la clef, le kit "Table + Tabourets" et la grille. Pour la prochaine soutenance, 
+J'ai créé de nouveaux préfabs comme la clef, le kit "Table + Tabourets" et la grille. \\ \\
+
+Pour la prochaine soutenance, 
 je souhaiterais finir toutes les mécaniques du deuxième et troisième niveaux, ainsi qu'imaginer d'autres mécaniques qui rendraient
-le jeu plus complexe. Je prévois aussi de travailler sur les cinématiques et sur la confection de nouveau niveau. 
-Notre groupe est toujours aussi bien soudé, nous travaillons souvent ensemble, que çe soit au campus ou par Discord. 
+le jeu plus complexe. Je prévois aussi de travailler sur les cinématiques et sur la confection de nouveau niveau. \\
+Notre groupe est toujours aussi bien soudé, nous travaillons souvent ensemble, que çe soit au campus ou par Discord. \\
 J'aime particulièrement les moments où Antoine me fait tester ses niveaux et quand je fais tester mes niveaux au groupe. 
 En testant les niveaux d'Antoine , cela me permet aussi d'imaginer d'autres niveaux, et vice-versa. 
 Ce projet permet de nous épanouir, mais aussi de se répartir les tâches et de travailler en groupe.
@@ -380,22 +422,22 @@ Ce projet permet de nous épanouir, mais aussi de se répartir les tâches et de
 
 \section{Edgar}
 \paragraph{} \hspace{0pt} \\
-Entre la première et la seconde soutenance, Edgar s’est occupé en particulier des sons du jeu. 
+Entre la première et la seconde soutenance, Edgar s’est occupé en particulier des sons du jeu. \\ 
 Il a recherché plusieurs sons pour notre personnage de mineur, comme des bruits de pas quand, il marche des bruit de pas quand il court, 
-des bruits quand il se blesse ou encore quand il meurt. Il a aussi recherché des bruits correspondant au Shadow Miner. 
+des bruits quand il se blesse ou encore quand il meurt. Il a aussi recherché des bruits correspondant au Shadow Miner. \\
 Certains pour lui n’était pas assez bons pour le jeu donc il en a enregistré deux autres avec son téléphone. 
 D’autres sons ont été inaccessible au niveau de la tonalité. Un changement de tonalité s'imposait alors il a utilisé Audacity pour 
-s’occuper justement des effets sonores pour qu’il y ait une bonne tonalité et que la vitesse soit ajusté aux animations. 
+s’occuper justement des effets sonores pour qu’il y ait une bonne tonalité et que la vitesse soit ajusté aux animations. \\ \\
+
 Il a aussi aidé à trouver une musique de fond pour le jeu qui a été composée par Nicolas Masciocchi 
 qui nous donne généreusement sa musique. Cette musique a ensuite été découpée pour être utilisée en endroits du jeu
-comme la fin d’un niveau ou la musique de fond dans le menu. 
+comme la fin d’un niveau ou la musique de fond dans le menu. \\ \\
 
-Edgar s’est renseigné aussi pour la création d’un système qui permettrait de générer des maps aléatoirement mais sans succès. 
+Edgar s’est renseigné aussi pour la création d’un système qui permettrait de générer des maps aléatoirement mais sans succès. \\ \\
 
 Il a particulièrement apprécié de s'occuper du son du jeu car il trouve cela extrêmement intéressant.
-Edgar est toujours très motivé pour le projet et montre que ce jeu lui tient à cœur.
+Edgar est toujours très motivé pour le projet et montre que ce jeu lui tient à cœur. \\
 Il apprécie de participer au groupe qui communique et travaille bien.
-
 
 
 \newpage
