@@ -19,6 +19,8 @@
 
 \usepackage{titletoc}
 
+\usepackage{stackengine,xcolor}
+
 %\usepackage{titlesec}
 %\titleformat{\part}[display]
   %{\normalfont\bfseries}{}{0pt}{\Large\bfseries}
@@ -34,6 +36,11 @@
 		}
 	}
 }
+
+\fboxrule=2pt
+\newcommand\cincludegraphics[2][]{%
+  \setbox0=\hbox{\includegraphics[#1]{#2}}%
+  \abovebaseline[-.5\ht0]{\includegraphics[#1]{#2}}}
 
   
 \renewcommand{\baselinestretch}{1.15}
@@ -52,6 +59,10 @@
 \date{{\LARGE \today}}
 
 \pagestyle{fancy}
-\fancyfoot[L]{\includegraphics{../images/ShadowMiners_logo_mini.png}} %50x33
+%\fancyfoot[L]{\includegraphics{../images/ShadowMiners_logo_mini.png}} %50x33
+\fancyfoot[L]{\cincludegraphics[scale=0.1]{../images/ShadowMiners_logo.png}} %50x33
+\fancyfoot[R]{STRASBOURG 2022}
 \fancyhead[R]{ACCEr}
 \fancyhead[L]{Rapport de projet}
+
+\setcounter{tocdepth}{3}
