@@ -244,6 +244,12 @@ Cela accroît fortement la portabilité du jeu. \\
 Le joueur rejoint tout d’abord un lobby, où il doit attendre que trois joueurs 
 soient connectés avant que la partie ne commence.
 
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.3]{images/multi_lobby.png}
+  \caption{Le lobby du mode multijoueurs}
+\end{figure}
+
 \paragraph*{} \hspace{0pt} \\
 Un joueur incarnera le ShadowMiner et devra tuer les deux autres joueurs qui 
 incarneront deux mineurs voulant rejoindre la surface. Un des mineurs pourra 
@@ -537,13 +543,18 @@ Unity proposé par les ACDC (et ayant revisionné cinq fois la conférence), j�
 J’ai donc créé le premier préfab : une porte.
 A l’aide d’un assemblage de cubes et d’une texture type bois de l’asset store (les mêmes qu' Antoine), 
 j’ai créé un encadrement puis la porte en elle-même. J’ai rajouté une animation d’ouverture et de fermeture 
-sur la porte et un script qui joue ces animations, lorsqu’un joueur aux alentours appuie sur la touche « E ».
+sur la porte et un script qui joue ces animations, lorsqu’un joueur aux alentours appuie sur la touche « E ». \\
 
 J’ai ensuite modélisé la mine vue de l’extérieur sous Unity.
 J’ai ensuite travaillé sur le joueur (le mineur) : j’ai tout d’abord récupéré le modèle 3D des standards assets d’Unity 4.x 
 qui est un mineur (donc génial pour notre projet). J’ai ensuite créé le script en C\# qui permet de déplacer 
 notre joueur, aussi bien en première personne qu’en troisième personne. \\
 
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.3]{images/cedric_mine.png}
+  \caption{La mine vue de l'extérieur}
+\end{figure}
 
 \paragraph{~~~~Le multijoueur} \hspace{0pt} \\
 Il nous avait été conseillé de présenter un début de multijoueur à la première soutenance. 
@@ -590,7 +601,7 @@ limite à un processus et donc de redonner de la vitesse de réponse au site int
 
 \paragraph{~~~~Le menu des paramètres} \hspace{0pt} \\
 Dès le début du projet, nous ne voulions pas du menu de démarrage d’Unity (le panneau de configuration avant 
-le lancement du jeu qui permet de modifier les paramètres du jeu). Nous l’avons donc désactivé.
+le lancement du jeu qui permet de modifier les paramètres du jeu). Nous l’avons donc désactivé. \\
 
 Mais un problème s’est posé : comment peut-on modifier les paramètres tels que la qualité des graphismes ou les touches sans ce menu ?
 J’ai donc créé le menu des paramètres qui est composé de trois panels : \\
@@ -604,6 +615,11 @@ A l’aide des PlayersPrefs (composants permettant de sauvegarder des données a
 et d’une classe Parametre créée pour l’occasion, ainsi que d’un petit coup de JSON sur une instance de la classe Parametre, 
 les paramètres sont sauvegardés entre les différentes scènes. \\
 
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.3]{images/cedric_parametre.png}
+  \caption{Le menu des paramètres}
+\end{figure}
 
 \paragraph{~~~~La scène de chargement} \hspace{0pt} \\
 Nous avions remarqué un ralentissement lors du chargement de certaines scènes particulièrement lourdes, nous avons donc eu 
@@ -622,8 +638,19 @@ J’ai donc créé un préfab de ce menu qui est composé de deux boutons : \\
 \end{itemize}}
 Le joueur peut donc mettre en pause le jeu en appuyant sur la touche « ECHAP » de son clavier. \\
 
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.28]{images/cedric_pausemenu.png}
+  \caption{Le menu de pause}
+\end{figure}
 
-\paragraph{~~~~Le ShadowMiner} \hspace{0pt} \\
+
+\paragraph{\\ \\ \\~~~~Le ShadowMiner} \hspace{0pt} \\
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{images/cedric_shadowminer.png}
+  \caption{Le ShadowMiner}
+\end{figure}
 Après quelques échecs avec les modèles 3D du ShadowMiner que nous avions trouvé pour la première soutenance, 
 j’ai décidé de le remplacer par un monstre vert trouvé sur l’asset store.
 
@@ -703,6 +730,12 @@ qui hante la mine. Le premier niveau est assez simple sans réelles difficultés
 que ça soit un petit labyrinthe. Différents mécanismes sont implémentés comme le fait de 
 pouvoir ouvrir une porte. \\
 
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.3]{images/clement_schema.png}
+  \caption{Schéma d'un niveau réalisé par Clément}
+\end{figure}
+
 \newpage
 
 \paragraph*{} \hspace{0pt}
@@ -713,6 +746,12 @@ le chemin du joueur. Cette grille peut s'ouvrir grâce à un levier qui se trouv
 du niveau. Je trouvais ce niveau encore un peu trop facile, je voulais alors lui ajouter une autre 
 difficulté, quoi de mieux que de rajouter le monstre de la mine : le Shadow Miner. La grille 
 s'ouvre quand on active le levier (grâce à des scripts C\#).  \\
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.4]{images/clement_map_Final.png}
+  \caption{Example de niveau réalisé par Clément}
+\end{figure}
 
 \paragraph*{} \hspace{0pt}
 J'ai ajouté des cinématiques quand il y avait le Shadow Miner dans le niveau. 
