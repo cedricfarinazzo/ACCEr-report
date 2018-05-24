@@ -15,24 +15,24 @@
 \fancypagestyle{plain}{}
 \stepcounter{chapter}
 \part{Introduction} 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Nous vous présentons notre rapport de projet. Ce dernier décrit l’état final du jeu ShadowMiner 
 ainsi que tous ces composants. \\
 Ce rapport de projet indique donc la sortie officielle du jeu ShadowMiner. \\
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Après des mois de travail acharné, nous allons vous présenter ce que nous avons fait pour respecter 
 notre cahier des charges et pour arriver à nos fins. \\
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Nous allons tout d’abord vous présenter notre groupe : ACCEr. Puis nous allons décrire les 
 principaux aspects du jeu ShadowMiner. \\
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Ensuite chacun des membres du groupe décrira explicitement son travail effectué. \\
 Enfin, nous indiquerons nos sources. \\
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 En bonus, nous avons rajouté quelques photos du jeu en annexe. \\
 
 %################### INTRO
@@ -68,7 +68,18 @@ confiant sur un projet plus ambitieux tel que le ShadowMiner. J'ai bien fait de 
 
 
 \paragraph{~~~~Clément} \hspace{0pt} \\
+Bonjour, je m'appelle Clément. J’ai grandi en région parisienne, à Antony. 
+Je suis arrivé à EPITA par hasard, je m'étais renseigné sur l'école, le domaine de 
+l'informatique m'a toujours beaucoup intéressé et je me suis retrouvé du jour au 
+lendemain à Strasbourg, soit à 400 kilomètres de chez moi, livré à moi-même, avec 
+ses avantages et ses inconvénients. \\
+Heureusement, l'école et les cours m'ont tout de suite plu, ainsi que l'ambiance 
+qu'il y a dans la classe. Je ne regrette pas du tout mon choix d'avoir intégré cette 
+prestigieuse école dans cette magnifique ville qu'est Strasbourg. Ce projet est une 
+réelle chance de pouvoir comprendre et apprendre comment les jeux vidéo fonctionnent, 
+de comprendre certains "bugs" qu'on pouvait voir sur certains jeux.  \\
 
+\newpage
 
 \paragraph{~~~~Edgar} \hspace{0pt} \\
 Je me présente : je m’appelle Edgar. J’ai commencé à m’intéresser vraiment à l’informatique  il y a trois ans . Je voulais 
@@ -78,7 +89,7 @@ C’est comme un accomplissement pour moi, j’avais envie de faire ça une fois
 
 
 \section{L'origine du nom du groupe : \textit{ACCEr}}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Le nom du groupe provient d’Antoine. A l’origine, nous nous appelions ACCer avant l’arrivée d’Edgar. 
 « ACC » pour les initiales de nos prénoms et « er » pour porter confusion entre notre groupe 
 et la société taïwanaise ACER, constructeur informatique bien connu. \\ \\
@@ -88,7 +99,7 @@ C’est ainsi qu’ACCEr est né.
 \newpage
 
 \section{Planning}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Voici un rappel de notre planning annoncé dans le cahier des charges : \\ \\
 \\ \\
 {
@@ -144,12 +155,12 @@ Voici un rappel de notre planning annoncé dans le cahier des charges : \\ \\
 \stepcounter{chapter}
 \part{Le jeu : ShadowMiner}
 \section{Type de jeu et inspiration}
-\paragraph{} \hspace{0pt} \\
+\paragraph*{} \hspace{0pt} \\
 ShadowMiner est un jeu d’horreur dans une mine où évoluent un mineur et un monstre (le ShadowMiner). \\
 
 \subsection{Inspiration}
 Le jeu possède un mode solo et un mode multijoueurs, inspirés de différents jeux. \\
-\paragraph{~~~~Inpiration du mode solo} \hspace{0pt} \\
+\paragraph[Inpiration du mode solo]{~~~~Inpiration du mode solo} \hspace{0pt} \\
 Le mode solo est un "survival horror" imaginé à partir des jeux d'horreur du moment, 
 en particulier "Outlast" et "Alien: Isolation" sortis en 2013 et 2014. 
 \\
@@ -170,7 +181,7 @@ change radicalement en fonction des choix de l'utilisateur.
 "Alien : Isolation" se déroule quatorze ans après les évènements du film "Alien, le huitième passager" 
 et l'histoire est respectée dans les moindres détails. \\ \\
 
-\paragraph{~~~~Inspiration du mode multijoueurs} \hspace{0pt} \\
+\paragraph[Inspiration du mode multijoueurs]{~~~~Inspiration du mode multijoueurs} \hspace{0pt} \\
 Le mode multijoueurs est un "2 vs 1" dans le même genre que "Dead Realm", "Evolve" 
 ou même "Mario Chase" dans Nintendo Land sur Wii U. 
 \\
@@ -191,7 +202,7 @@ joueurs tentent de lui échapper. Parmi les deux mineurs il peut y avoir un espr
 \section{Le mode solo}
 
 \subsection[Scénario]{~~~~Scénario}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 \begin{quotation}
 	Un mineur descend tôt le matin dans les derniers sous-sols de la mine, là où l’oxygène se fait rare. 
 	Un monstre (le Shadow Miner) coupe les câbles de l’ascenseur. 
@@ -199,7 +210,7 @@ joueurs tentent de lui échapper. Parmi les deux mineurs il peut y avoir un espr
 \end{quotation}
 
 \subsection[Gameplay]{~~~~Gameplay}
-\paragraph{} \hspace{0pt} \\
+\paragraph*{} \hspace{0pt} \\
 L’utilisateur incarne alors le mineur. \\
 Le joueur devra donc progresser dans une série de niveaux de plus en plus difficiles. \\
 Des pièges tels que des piques ou des trapes seront là pour le ralentir. \\
@@ -209,7 +220,7 @@ qui symbolise la fin d’un niveau, pour passer à l’étage suivant et donc au
 Le dernier niveau est ainsi la sortie de la mine. \\ 
 
 \subsection[Progression du joueur]{~~~~Progression du joueur}
-\paragraph{} \hspace{0pt} \\
+\paragraph*{} \hspace{0pt} \\
 Le joueur devra réussir le niveau en cours pour accéder au niveau suivant. \\ \\
 La progression du joueur est visible en jeu et sur le site internet \url{https://accer.ddns.net} si le joueur a lié son compte au jeu. \\
 
@@ -218,7 +229,7 @@ La progression du joueur est visible en jeu et sur le site internet \url{https:/
 \section{Le mode multijoueurs}
 
 \subsection[Prérequis]{~~~~Prérequis}
-\paragraph{} \hspace{0pt} \\
+\paragraph*{} \hspace{0pt} \\
 Le joueur devra créer un compte pour pouvoir accéder au mode multijoueurs. \\
 Ce compte pourra être créé sur le site internet \url{https://accer.ddns.net} ou dans le jeu lui-même. Ainsi le joueur pourra 
 consulter et modifier ses données depuis le site internet \url{https://accer.ddns.net} ou depuis le jeu. Ce système lui permet 
@@ -226,17 +237,17 @@ de jouer sur n’importe quel exécutable du jeu en conservant ses données.
 Cela accroît fortement la portabilité du jeu. \\
 
 \subsection[Gameplay]{~~~~Gameplay}
-\paragraph{} \hspace{0pt} \\
+\paragraph*{} \hspace{0pt} \\
 Le joueur rejoint tout d’abord un lobby, où il doit attendre que trois joueurs 
 soient connectés avant que la partie ne commence.
 
-\paragraph{} \hspace{0pt} \\
+\paragraph*{} \hspace{0pt} \\
 Un joueur incarnera le ShadowMiner et devra tuer les deux autres joueurs qui 
 incarneront deux mineurs voulant rejoindre la surface. Un des mineurs pourra 
 s’enlever la vie et devenir un esprit de la mine, qui contrôle les cloisons de 
 la mine (porte, mur, gouffre) pour aider l’autre mineur. \\
 
-\paragraph{~~~~Comment gagner ?} \hspace{0pt} \\
+\paragraph*{~~~~Comment gagner ?} \hspace{0pt} \\
 Deux solutions : \\
 {\begin{itemize}
 	\item Le ShadowMiner doit tuer tous les mineurs pour remporter la partie,
@@ -244,7 +255,7 @@ Deux solutions : \\
 \end{itemize}}
 
 \subsection[Score du joueur]{~~~~Score du joueur}
-\paragraph{} \hspace{0pt} \\
+\paragraph*{} \hspace{0pt} \\
 Le joueur gagnera en score à chaque victoire en mode multijoueurs. \\
 Son score sera visible en jeu mais aussi sur le site internet \url{https://accer.ddns.net}. \\
 Un classement des meilleurs joueurs est d’ailleurs disponible sur le site internet \url{https://accer.ddns.net}. \\
@@ -254,19 +265,19 @@ Un classement des meilleurs joueurs est d’ailleurs disponible sur le site inte
 
 \section{Le site internet}
 \subsection[Hébergement]{~~~~Hébergement}
-\paragraph{} \hspace{0pt} \\
+\paragraph*{} \hspace{0pt} \\
 L'adresse du site internet est \url{https://accer.ddns.net}. \\
 Il est hébergé à Strasbourg chez Cédric sur un Raspberry pi modèle 3B+. \\
 L’accès au site est assuré par un élastique qui maintient le câble Ethernet relié au Raspberry pi. \\
 
 \subsection[Compte]{~~~~Compte}
-\paragraph{} \hspace{0pt} \\
+\paragraph*{} \hspace{0pt} \\
 Le système de compte intégré au site internet \url{https://accer.ddns.net} permet de créer, 
 gérer son compte comme par exemple, modifier son pseudo, sa description, son image de profil 
 ou encore son mot de passe. \\
 
 \subsection[L’onglet Shadow Miner]{~~~~L’onglet Shadow Miner}
-\paragraph{} \hspace{0pt} \\
+\paragraph*{} \hspace{0pt} \\
 Cet onglet permet d’accéder à plusieurs pages : \\
 {\begin{itemize}
 	\item Une brève description du projet (\url{https://accer.ddns.net/?p=project})
@@ -279,7 +290,7 @@ Cet onglet permet d’accéder à plusieurs pages : \\
 \end{itemize}}
 
 \subsection[Accès depuis le jeu]{~~~~Accès depuis le jeu}
-\paragraph{} \hspace{0pt} \\
+\paragraph*{} \hspace{0pt} \\
 Afin de pouvoir gérer son compte depuis le jeu, un serveur et un client ont été créés en C\#. \\
 Le serveur écoute sur le port TCP 4247 (l’adresse est donc accer.ddns.net:4247). Ainsi le client, 
 intégré au jeu, permet de créer un compte ou bien de se connecter, de modifier son pseudo, 
@@ -297,20 +308,20 @@ en mode multijoueurs (pour lequel il est obligatoire de créer un compte). \\
 \stepcounter{chapter}
 \part{Réalisations individuelles}
 \section*{Introduction}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Nous allons maintenant vous présenter chacun à notre tour, le travail que nous avons réalisé, 
 ainsi que ce que le projet nous a apporté. \\ \\
 
 \section{Antoine}
 \subsection{Introduction}
-\paragraph{} \hspace{0pt} 
+\paragraph*{} \hspace{0pt} 
 Mes tâches pour ce projet furent la création des préfabs (objets complexes qui
 serviront de base) pour les niveaux (murs, sol, porte, ..) et la création de multiples
 niveaux. Elles ont été établies lors de la rédaction du cahier des charges début janvier. \\
 
 \subsection{Description du travail}
 
-\paragraph{} \hspace{0pt} 
+\paragraph*{} \hspace{0pt} 
 Pour débuter le projet j'ai commencé par construire des préfabs. Le tout premier
 objet que j'ai utilisé est un cube 3D. En le dupliquant puis en assemblant ses
 copies j'ai construit un mur en pierre. Ce fut le début de l'ère des préfabs. \\@(\# antoine\_mur.png \#)\@  \\
@@ -319,7 +330,7 @@ proviennent d'un package gratuit de l'« asset-store ». Nous nous sommes ensuit
 mis d'accord avec le groupe au sujet de cette plateforme : nous utiliserons le
 moins possible son contenu. \\
 
-\paragraph{} \hspace{0pt} 
+\paragraph*{} \hspace{0pt} 
 Par la suite j'ai créé une flamme en utilisant le système de particule d'Unity3D, les
 anciens élèves de 1ère année à EPITA nous avaient conseillés d'en abuser, car les
 particules plaisent beaucoup aux professeurs. Mythe ou réalité ? Quoi qu'il en soit,
@@ -328,7 +339,7 @@ confectionner des torches et des lanternes. J'avais donc respecté l'accord vis 
 du contenu prémâché de l' «asset-store » d 'Unity3D. \@(\# antoine\_mineurtorche.png \#)\@ \\
 
 
-\paragraph{} \hspace{0pt} 
+\paragraph*{} \hspace{0pt} 
 Je continuais à le respecter en installant Blender. Ce logiciel m'a servi à créer des
 rochers en modelant une sphère grâce à l'outil de sculpture. Après avoir transféré
 les rochers sur Unity, j'ai ajouté un composant de gravité (Rigidbody) pour provoquer des
@@ -336,7 +347,7 @@ les rochers sur Unity, j'ai ajouté un composant de gravité (Rigidbody) pour pr
 soutenance du 14 mars 2018. \\
 
 
-\paragraph{} \hspace{0pt} 
+\paragraph*{} \hspace{0pt} 
 J'ai réalisé ma première interface utilisateur à ce moment. Il s'agit du premier menu
 du jeu, composé de trois boutons : 1. Niveau un ; 2. Niveau deux ; 3. Multijoueur.
 J'utilisais l'option « Add on click » d'Unity pour charger les scènes des trois niveaux
@@ -350,7 +361,7 @@ continuer à droite et après quelques pas, il se trouvera devant un énorme cra
 qui constitue la zone de minage. \@(\# antoine\_cratere.png \#)\@   \\
 
 
-\paragraph{} \hspace{0pt} 
+\paragraph*{} \hspace{0pt} 
 Fin avril, la création d'autres niveaux commença. Je construisis un niveau avec un
 sol qui s'écroule lorsque le joueur passe dessus et un niveau avec un passage
 enflammé. A partir de ce moment, les flammes infligent des dégâts aux joueurs. Le
@@ -363,7 +374,7 @@ deux mini-niveaux mentionnés ci-dessus ont donc été intégrés à deux des cl
 niveau modèle. \\
 
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Le niveau modèle est un niveau assez simple sur le plan du gameplay mais plus
 grand et plus impressionnant (si si, je vous assure). Il débute avec un couloir
 comme les deux premiers niveaux construits avant la première soutenance mi-mars. 
@@ -374,14 +385,14 @@ reprend et se termine dans un espace de minage avec des cagettes de pépites
 d'or et des murs pleins de minerais. \@(\# antoine\_pepite.png \#)\@   \\
 
 
-\paragraph{} \hspace{0pt} 
+\paragraph*{} \hspace{0pt} 
 Dans le même temps, j'ai commencé la réalisation d'un niveau pour le mode
 multijoueurs. Le plan du niveau a été réalisé sur Paint (logiciel de dessin) et ce
 niveau contient un labyrinthe, des faux murs (qui se comportent comme des
 portes), des passages sous-terrains et un pont tournant. \\
 
 
-\paragraph{} \hspace{0pt} 
+\paragraph*{} \hspace{0pt} 
 Pour le menu du jeu, j'ai d'abord assemblé boutons et textes pour créer une
 interface de connexion au serveur, puis d'inscription. J'ai ensuite repris la première
 scène du choix des niveaux (avec les trois boutons rappelez-vous) et j'ai rajouté
@@ -396,14 +407,14 @@ profil » qui permet à l'utilisateur d'accéder aux informations de son compte
 modifier. \@(\# antoine\_myaccount.png \#)\@ \\
 
 
-\paragraph{} \hspace{0pt} 
+\paragraph*{} \hspace{0pt} 
 Pour terminer, ma dernière contribution au projet (avant la soutenance finale car je
 prévois d'améliorer le jeu par la suite) fut de créer d'autres niveaux pour les
 ajouter aux copies du terrain modèle et rendre chaque niveau différent. \\
 
 
 \subsection{Apports personnels}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Ce projet m'a apporté énormément de choses ! Pour commencer, réaliser un projet
 de plusieurs mois impose un temps de travail conséquent. Ce temps de travail est
 d'autant plus optimisé qu'il est régulier, nous en avons fait l'expérience. J'ai donc
@@ -411,7 +422,7 @@ appris à mieux me rendre compte de mes capacités, à optimiser les heures avec
 groupe, les heures en salle machine et les heures de rêverie à imaginer les
 prochaines étapes du projet. \\
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Au fur et à mesure de l'avancement du projet, j'ai rencontré plusieurs difficultés.
 Par exemple, mes scripts C\# qui ne prenaient pas de variables dans Unity, les
 flammes qui ne faisaient aucun dégât au joueur ou encore les murs qui
@@ -420,7 +431,7 @@ au soutien des autres membres du groupe. Cependant il est arrivé que certains
 soucis ne trouvent pas de solutions, mais nous avons toujours pu contourner ces
 complications. \\
 
-\paragraph{} \hspace{0pt} 
+\paragraph*{} \hspace{0pt} 
 De plus comme nous apprenions chacun à notre façon, à l’unisson nous
 possédions plusieurs méthodes pour une seule tâche et chacun pouvait apprendre
 des autres. Dans la partie précédente (Description du travail), j'ai témoigné avoir
@@ -428,7 +439,7 @@ utilisé l'utilitaire « add on click » d'Unity, alors que par la suite, Cédri
 que la fonction « Button.OnClick.addListener() » dans un script C\# faisait la même chose. Cela évitait de devoir
 configurer les vingt boutons de niveaux pour le choix du terrain en mode solo. \\
 
-\paragraph{} \hspace{0pt} 
+\paragraph*{} \hspace{0pt} 
 Ce jeu-vidéo permet aussi de laisser une trace de nos efforts et de notre travail
 d'équipe . Nous pourrons continuer à travailler dessus pendant notre temps libre
 (si on a un tant soit peu de temps libre) et tout comme certains projets d'anciennes
@@ -437,7 +448,7 @@ grande famille. Ce sera une pierre en plus à l'édifice. \\
 
 
 \subsection{Conclusion d'Antoine}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Mes tâches ont donc été réalisées. Le menu du jeu est opérationnel, les niveaux
 sont au nombre de vingt (et un pour le mode multijoueurs). \\
 
@@ -445,7 +456,7 @@ sont au nombre de vingt (et un pour le mode multijoueurs). \\
 \newpage
 \section{Cédric}
 \subsection{Introduction}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Depuis la création du projet, je travaille sur de multiples travaux, tels que le site web ou le multijoueur. \\
 Etant chef de projet, je me suis mis au maximum à la disposition des trois membres de notre équipe. \\
 
@@ -583,14 +594,14 @@ jouable par n’importe quel joueur possédant un compte. \\
 
 
 \subsection{Apports personnels}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Ce projet m’a beaucoup apporté dans deux domaines : \\
 J’ai appris à gérer une équipe sur le long terme, à travailler et à m'adapter avec chacun des membres de l'équipe. 
 Git nous a bien aidé pour mettre en commun nos travaux, malgré quelques merges à résoudre dont 
 nous avions l’habitude au fil du temps. \\
 L’équipe s’est renforcée et nous avons fait du bon travail du groupe. \\ 
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Sur le plan technique, ce projet m’a permis de découvrir des technologies d’Unity telles que les Nav Mesh Agent 
 pour l’IA ou encore Photon pour le multijoueur.
 Mais ce projet nous a surtout appris à chercher par nous-mêmes les informations manquantes via la documentation 
@@ -601,7 +612,7 @@ et enrichir notre projet. \\
 
 
 \subsection{Conclusion de Cédric}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 J’ai donc bien assumé mon rôle de chef de projet. J’ai rempli tous mes objectifs et 
 j’en ai même fait plus que prévu. \\
 Etant toujours très motivé, je compte continuer à développer ce jeu, même après la fin du projet en rajoutant du 
@@ -611,24 +622,70 @@ contenu et en fixant les nombreux bugs rapportés. \\
 \newpage
 \section{Clément}
 \subsection{Introduction}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
+Lors de la formation des groupes, j'ai décidé de me mettre avec Cédric Farinazzo et Antoine Claudel 
+pour former le groupe ACCer car je m'entendais bien avec eux et je savais que je pouvais rester 
+sérieux en travaillant avec eux. On avait alors une idée de Battle Royale avec les gens de la 
+classe combattant dans Strasbourg à l'aide de bretzel et de tartes flambés, plus communément 
+appelé "Flammekueche". Avec l'arrivé d'Edgar Grizzi, nous nous sommes renommés ACCEr et nous 
+avons opté pour un jeu Survival Horror dans une mine : Shadow Miner. \\
 
 \subsection{Travail réalisé}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
+Nous nous sommes alors répartis les tâches selon ce que chacun voulait réaliser 
+dans le projet. Personnellement, j'ai toujours aimé créer des maps et décorer 
+des environnements à ma manière comme dans Super Smash Brawl, Brawl Stars ou encore 
+Pokemon version Emeraude ; c'est pourquoi la tâche de la réalisation des différents 
+niveaux m'allait parfaitement. N'ayant jamais utilisé Unity auparavant, j'ai d'abord 
+regardé des tutoriels sur Youtube avant de commencer à l'utiliser. Je me suis aussi renseigné 
+sur d'autres logiciels tels que Blender qui permet de faire des formes plus 
+arrondies mais je le trouvais moins maniable qu'Unity. Je me suis d'abord exercé à créer des 
+préfabs : chariot, étagère, table, chaises, poutre, obstacles, trousseau de clefs... \\
 
-\subsection{Apports personnels}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
+Avant de concevoir un niveau, je réfléchissais à la géométrique, à la structure et au 
+mécanisme du niveau sur un tableau avant de travailler sur Unity. Ainsi, je savais ce 
+que j'avais à faire dans le niveau. Pour le premier niveau, le joueur se retrouve au fin 
+fond de la mine après que l'ascenseur se soit écrasé. Il doit alors quitter la mine en 
+évitant les différents pièges et en ne se faisant pas tuer par le Shadow Miner, le monstre 
+qui hante la mine. Le premier niveau est assez simple sans réels difficultés à part le fait 
+que ça soit un petit labyrinthe. Différents mécanismes sont implémentés comme le fait de 
+pouvoir ouvrir une porte. \\
+
+\newpage
+
+\paragraph*{} \hspace{0pt}
+Pour les niveaux suivants, je voulais que ces derniers soient plus compliqués, avec des 
+objectifs à atteindre avant de terminer le niveau, un certain temps pour les accomplir. 
+C'est pourquoi j'ai créé un préfab "grille (dont je suis plutôt fier je l'avoue) pour bloquer 
+le chemin du joueur. Cette grille peut s'ouvrir grâce à un levier qui se trouve à l'autre bout 
+du niveau. Je trouvais ce niveau encore un peu trop facile, je voulais alors lui ajouter une autre 
+difficulté, quoi de mieux que de rajouter le monstre de la mine : le Shadow Miner. La grille 
+s'ouvre quand on active le levier (grâce à des scripts C\#).  \\
+
+\paragraph*{} \hspace{0pt}
+J'ai ajouté des cinématiques quand il y avait le Shadow Miner dans le niveau. 
+Quand on actionne le levier, une cinématique nous montre ce qu'il se produit : une 
+grille qui s'ouvre, un passage qui se débloque... je voulais aussi faire des cinématiques 
+entre les niveaux un peu comme dans "The last of us" ou "Call of Duty", mais les graphismes 
+d'Unity ne rendaient vraiment pas bien et je n'étais pas satisfait. \\
 
 \subsection{Conclusion de Clément}
-\paragraph{} \hspace{0pt}
-
+\paragraph*{} \hspace{0pt}
+Notre groupe était bien soudé, chacun savait ce qu'il avait à faire. Je suis satisfait 
+de ce que nous avons réalisé, j'ai pu apprendre beaucoup de choses, en cherchant sur 
+Youtube comment réaliser quelque chose sur Unity ou grâce à mes équipiers de projet. 
+Il y avait des séances de groupe qui nous permettaient de travailler ensemble, de demander 
+l'avis de chacun des membres du groupe et les décisions pouvaient être prises très rapidement. 
+Ce projet m'a permis de m'améliorer dans le travail en groupe, de découvrir de nouveaux 
+logiciels et de comprendre ce qu'il se passait derrière la réalisation d'un jeu vidéo.  \
 
 \newpage
 \section{Edgar}
 
 \subsection{Introduction}
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Nous sommes en septembre, le projet est annoncé à toute la classe. 
 J’étais déjà particulièrement enthousiaste avant, je connaissais l’existence du projet. 
 En septembre, ma motivation pour le projet était plutôt haute, je commençais à avoir quelques idées 
@@ -649,7 +706,7 @@ la pré-rentrée avec eux, je n’ai aucun souvenir de bien connaître Antoine a
 Aujourd’hui, je pense que nous nous connaissons plutôt bien. \\
 
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Le nom du groupe est venu d'Antoine. Il avait mis les initiales de nos 
 prénoms respectifs dans l’ordre alphabétique (ACCE), il rajouta alors un r minuscule pour 
 que cela ressemble au constructeur informatique mondialement connu Acer. Nous n’avions pas 
@@ -663,7 +720,7 @@ l’idée de ShadowMiner était née. \\
 
 \subsection{Travail réalisé}
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Notre aventure commence, le cahier des charges se fait dans les temps avec nos idées. Nous faisons une 
 ou deux réunions de projet, où chacun de nous donne ses idées. Certaines idées vont un peu dans l'utopie 
 pour un projet comme celui-ci, mais ces idées utopiques montrent quelque chose d'une importance cruciale 
@@ -672,14 +729,14 @@ alors choisi les meilleures selon nous et elles apparaissent aujourd'hui dans no
 même si certaines choses ont été modifiées depuis.  \\
 
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Entre le début de la première soutenance, nous avons commencé le projet, pour moi un peu difficilement, 
 je n'ai pas réussi à utiliser Unity à cause de mon ordinateur un peu vieux. \\
 À présent je vais vous expliquer mon travail 
 personnel sur le projet, où est-ce que j’ai œuvré à travers ce projet tout au long de l’année. \\
 
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Avant la première soutenance, je me suis énormément concentré pour la modélisation 3D ainsi que le personnage 
 du Shadow Miner, j’ai appris comment modéliser un personnage en 3D sur le logiciel Blender, 
 cela m’a pris plusieurs heures pour avoir quelque chose que je trouvais pas si mal où je pouvais mettre 
@@ -705,7 +762,7 @@ La première soutenance approchait à grands pas.
 La veille (et toute la nuit) Cédric et Clément ont fait un travail exceptionnel, que 
 je me permet de souligné car ils ont œuvré comme des chefs pour obtenir un très bon résultat. \\
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Pendant la période entre la première et la deuxième soutenance, 
 nous avons fait du bon travail. Personnellement je me suis focalisé sur 
 le son du jeu, parce que c’est quelque chose qui m’intéresse énormément, je voulais absolument enregistrer 
@@ -730,7 +787,7 @@ prêts et préparés pour la deuxième soutenance et elle s’est très bien pas
 travail, notre projet n’était pas encore terminé mais, vu le travail déjà accompli, nous étions plutôt fiers. \\
 
 \subsection{Conclusion d'Edgar}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Et aujourd’hui, nous écrivons notre rapport de projet. Cela nous rappelle et remémore des souvenirs de travail et 
 de groupe. Certains moments furent stressants comme la préparation avant les soutenances, 
 d’autres agréables comme des moments de rigolade dans le groupe, où nous blaguions entre nous. Le groupe 
@@ -743,7 +800,7 @@ au jury et nous espérons aussi répondre à leurs attentes.
 \newpage
 
 \section*{Conclusion des réalisations individuelles}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Nous pouvons donc conclure que chacun a rempli ses objectifs.
 Ce projet nous a beaucoup apporté et nous a appris à travailler en groupe et faire face à certains aléas.
 
@@ -759,7 +816,7 @@ Ce projet nous a beaucoup apporté et nous a appris à travailler en groupe et f
 \part{Sources et remerciements}
 
 \section{Sources}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 N'étant pas des experts en modélisation 3D , nous avons dû trouver nos personnages sur internet : 
 {\begin{itemize}
 	\item Le mineur provient des standarts assets de Unity 4.x, nous avons juste récupéré le modèle 3D et les animations,	
@@ -777,7 +834,7 @@ Voici aussi les sources des musiques et des effets sonores du jeu : \\
 \end{itemize}} 
 
 \section{Technologies utilisées}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Pour réaliser ce projet, nous avons dû coder dans plusieurs langages et utiliser différentes technologies : 
 {\begin{itemize}
 	\item Unity3D, pour le moteur de jeu,
@@ -788,7 +845,7 @@ Pour réaliser ce projet, nous avons dû coder dans plusieurs langages et utilis
 	\item \LaTeX ~ pour les rapports. \\
 \end{itemize}}
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Nous avons aussi utilisé quelques Frameworks  afin de réaliser rapidement le design du site internet :
 {\begin{itemize}
 	\item Le framework JQuery (\url{https://jquery.com/}). pour simplifier la mise en place du javascript,
@@ -796,7 +853,7 @@ Nous avons aussi utilisé quelques Frameworks  afin de réaliser rapidement le d
 \end{itemize}}
 
 \section{Remerciements}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Nous remercions Monsieur Nicolas Masciocchi pour nous avoir aimablement autorisé à utiliser sa musique 
 comme musique de fond. \\
 
@@ -809,20 +866,20 @@ comme musique de fond. \\
 \fancypagestyle{plain}{}
 \stepcounter{chapter}
 \part{Conclusion}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Après la création du groupe ACCEr, nous nous sommes rapidement mis d’accord sur un jeu 
 d’horreur dans une mine : ShadowMiner. \\
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Ce projet nous a forcés à travailler dur pour atteindre nos objectifs et nous a appris à 
 travailler en groupe et à utiliser des technologies dont nous ne connaissions pas, pour la 
 plupart, l’existence avant le début du projet. \\
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Notre groupe étant soudé, nous avons pu remplir les objectifs annoncés dans le cahier des 
 charges de janvier et ainsi permettre la sortie officielle du jeu ShadowMiner. \\
 
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Cependant, nous n’allons pas nous arrêter là : nous allons continuer de fixer les bugs 
 et de rajouter du contenu à notre jeu. \\
 
@@ -838,7 +895,7 @@ et de rajouter du contenu à notre jeu. \\
 \fancypagestyle{plain}{}
 \stepcounter{chapter}
 \part{Annexe}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 Voici quelques images du jeu : \\ \\
 
 
@@ -849,7 +906,7 @@ Voici quelques images du jeu : \\ \\
 \fancypagestyle{plain}{}
 \stepcounter{chapter}
 \part{Glossaire}
-\paragraph{} \hspace{0pt}
+\paragraph*{} \hspace{0pt}
 
 
 %################### Glossaire
