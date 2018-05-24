@@ -16,7 +16,24 @@
 \stepcounter{chapter}
 \part{Introduction} 
 \paragraph{} \hspace{0pt}
+Nous vous présentons notre rapport de projet. Ce dernier décrit l’était finale du jeu ShadowMiner 
+ainsi que tous ces composants. \\
+Ce rapport de projet indique donc la sortie officielle du jeu ShadowMiner. \\
 
+\paragraph{} \hspace{0pt}
+Après des mois de travail acharné, nous allons vous présenter ce que nous avons fait pour respecter 
+notre cahier des charges et arrivé à nos fins. \\
+
+\paragraph{} \hspace{0pt}
+Nous allons tout d’abord vous présenter notre groupe : ACCEr. Puis nous allons décrire les 
+principaux aspects du jeu ShadowMiner. \\
+
+\paragraph{} \hspace{0pt}
+Ensuite chacun des membres du groupe décriera explicitement son travail effectué. \\
+Enfin, nous indiquerons nos sources. \\
+
+\paragraph{} \hspace{0pt}
+En bonus, nous avons rajouté quelques photos du jeu en annexe. \\
 
 %################### INTRO
 
@@ -68,47 +85,47 @@ C’est ainsi qu’ACCEr est né.
 
 \section{Planning}
 \paragraph{} \hspace{0pt}
-Voici un rappel de notre planning annoncé dans le cahier des charges :
+Voici un rappel de notre planning annoncé dans le cahier des charges : \\ \\
 \\ \\
-{\small
-	\begin{tabular}{|p{7.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|}
-		\hline
-		Pourcentages des tâches & \multicolumn{3}{|c|}{jusqu'à la soutenance} \\ 
-		\cline{2-4}
-			& \no 1 & \no 2 & \no 3 \\
-		\hline
-		Création des préfabs de map pour les niveaux (murs, sol, porte, ..) & 75\% & 100\% & 100\% \\
-		\hline
-		Modélisation 3D pour de meilleurs graphismes (si possible) & 0\% & 75\% & 100\% \\
-		\hline
-		Script c\# animation & 30\% & 60\% & 100\% \\
-		\hline
-		Création des préfabs des joueurs & 100\% & 100\% & 100\% \\
-		\hline
-		Script c\# joueur & 50\% & 75\% & 100\% \\
-		\hline
-		Création de multiples niveaux (entre 20 et 40) & 10-20\% & 50\% & 100\% \\
-		\hline
-		Création du Shadow Miner et Script c\# pour l'IA du Shadow Miner & 30\% & 60\% & 100\% \\
-		\hline
-		Cinématique du jeu & 0\% & 50\% & 100\% \\
-		\hline
-		Son du jeu & 0\% & 30\% & 100\% \\
-		\hline
-		Menu du jeu & 0\% & 40\% & 100\% \\
-		\hline
-		Création du site internet et Hébergement en ligne & 40\% & 80\% & 100\% \\
-		\hline
-		Création du serveur multijoueurs & 40\% & 90\% & 100\% \\
-		\hline
-		Création des joueurs pour multijoueurs & 30\% & 90\% & 100\% \\
-		\hline
-		Création du système de map aléatoire pour le multijoueurs & 0\% & 20\% & 100\% \\
-		\hline
-		Compilation du jeu et enregistrement sur CD & 0\% & 0\% & 100\% \\
-		\hline 
-		\end{tabular}
-	\label{Planning}	
+{
+\begin{tabular}{|p{7.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|}
+	\hline
+	Pourcentages des tâches & \multicolumn{3}{|c|}{jusqu'à la soutenance} \\ 
+	\cline{2-4}
+		& \no 1 & \no 2 & \no 3 \\
+	\hline
+	Création des préfabs de map pour les niveaux (murs, sol, porte, ..) & 75\% & 100\% & 100\% \\
+	\hline
+	Modélisation 3D pour de meilleurs graphismes (si possible) & 0\% & 75\% & 100\% \\
+	\hline
+	Script c\# animation & 30\% & 60\% & 100\% \\
+	\hline
+	Création des préfabs des joueurs & 100\% & 100\% & 100\% \\
+	\hline
+	Script c\# joueur & 50\% & 75\% & 100\% \\
+	\hline
+	Création de multiples niveaux (entre 20 et 40) & 10-20\% & 50\% & 100\% \\
+	\hline
+	Création du Shadow Miner et Script c\# pour l'IA du Shadow Miner & 30\% & 60\% & 100\% \\
+	\hline
+	Cinématique du jeu & 0\% & 50\% & 100\% \\
+	\hline
+	Son du jeu & 0\% & 30\% & 100\% \\
+	\hline
+	Menu du jeu & 0\% & 40\% & 100\% \\
+	\hline
+	Création du site internet et Hébergement en ligne & 40\% & 80\% & 100\% \\
+	\hline
+	Création du serveur multijoueurs & 40\% & 90\% & 100\% \\
+	\hline
+	Création des joueurs pour multijoueurs & 30\% & 90\% & 100\% \\
+	\hline
+	Création du système de map aléatoire pour le multijoueurs & 0\% & 20\% & 100\% \\
+	\hline
+	Compilation du jeu et enregistrement sur CD & 0\% & 0\% & 100\% \\
+	\hline 
+	\end{tabular}
+\label{Planning}	
 }
 
 
@@ -122,6 +139,51 @@ Voici un rappel de notre planning annoncé dans le cahier des charges :
 \fancypagestyle{plain}{}
 \stepcounter{chapter}
 \part{Le jeu : ShadowMiner}
+\section{Type de jeu et inspiration}
+\paragraph{} \hspace{0pt} \\
+ShadowMiner est un jeu d’horreur dans un mine où évolue un mineur et un monstre (le ShadowMiner). \\
+
+\subsection{Inspiration}
+Le jeu possède un mode solo et un mode multijoueurs, inspiré de jeux différents. \\
+\paragraph{~~~~Inpiration du mode solo} \hspace{0pt} \\
+Le mode solo est un "survival horror" imaginé à partir des jeux d'horreur du moment, 
+en particulier "Outlast" et "Alien: Isolation" sortis en 2013 et 2014. 
+\\
+Le principe est de s'enfuir d'une mine en progressant dans une aventure guidée 
+avec des «screamers» (moments de frissons/ frayeurs) prédéfinis et un scénario. 
+Si le joueur n'est pas assez réactif, il peut mourir.
+\\
+Le terme "survival horror" est utilisé pour la première fois en 1996 lors de la sortie 
+de Resident Evil. Parmi les "survivals horror" les plus connus, il y a "Outlast" qui 
+nous a inspirés mais aussi "Until Dawn" et "Alien : Isolation". 
+\\
+Dans "Outlast", le joueur prend le contrôle d'un journaliste qui enquête sur un asile psychiatrique; 
+"Until Dawn" raconte l'histoire d'un groupe de jeunes qui se rend dans un châlet 
+en montagne pour passer les vacances. Le point fort de ce jeu réside dans son mode 
+de jeu à la Heavy Rain ou Beyond Two Souls, c'est un film interactif dont l'histoire 
+change radicalement en fonction des choix de l'utilisateur. 
+\\
+"Alien : Isolation", qui se déroule quatorze ans après les évènements du film "Alien, le huitième passager" 
+et l'histoire est respectée dans les moindres détails. \\ \\
+
+\paragraph{~~~~Inspiration du mode multijoueurs} \hspace{0pt} \\
+Le mode multijoueurs est un "2 vs 1" dans le même genre que "Dead Realm", "Evolve" 
+ou même "Mario Chase" dans Nintendo Land sur Wii U. 
+\\
+Dans "Dead Realm", 3 joueurs se retrouvent dans un décor effrayant (vieux manoir, jardin de nuit, ...) enfermés 
+avec un monstre terrifiant (loup garou, bébé tueur, clown) qui peut les transformer 
+en spectre et s'en faire des alliés pour éliminer tous les survivants. 
+\\
+Dans "Evolve", 4 joueurs avec des compétences spécifiques se regroupent pour capturer 
+une bête mais elle devient plus forte au fil du temps et au final le chassé devient le chasseur. 
+\\
+"Mario Chase" est un mini jeux de cache-cache ou un joueur possède une mini map 
+avec la position de chaque joueur et doit réussir à ne pas se faire attraper par les autres. 
+\\
+Dans notre jeu, "ShadowMiner", un joueur incarne le ShadowMiner de la mine et les 2 autres 
+joueurs tentent de lui échapper. Parmi les 2 mineurs il peut y avoir un esprit de la mine (explications plus bas). \\ \\
+
+
 \section{Le mode solo}
 
 \subsection[Scénario]{~~~~Scénario}
@@ -227,11 +289,11 @@ en mode multijoueurs (pour lequel il est obligatoire de créer un compte). \\
 \fancypagestyle{plain}{}
 \stepcounter{chapter}
 \part{Réalisation individuelle}
-\section*{Contexte}
+\section*{Introduction}
 \paragraph{} \hspace{0pt}
+Nous allons maintenant vous présenter chacun notre tour le travail que nous avons réalisé 
+ainsi ce que le projet nous apporté. \\ \\
 
-
-\newpage
 \section{Antoine}
 \subsection{Introduction}
 \paragraph{} \hspace{0pt} 
@@ -370,7 +432,7 @@ promotions d'EPITA sont restés disponible sur Internet, le notre rejoindra cett
 grande famille. Ce sera une pierre en plus dans l'édifice. \\
 
 
-\subsection{Conclusion}
+\subsection{Conclusion d'Antoine}
 \paragraph{} \hspace{0pt}
 Mes tâches ont donc été réalisées. Le menu du jeu est opérationnel, les niveaux
 sont au nombre de vingts (et un pour le multijoueur). \\
@@ -378,16 +440,179 @@ sont au nombre de vingts (et un pour le multijoueur). \\
 
 \newpage
 \section{Cédric}
+\subsection{Introduction}
 \paragraph{} \hspace{0pt}
+Depuis la création du projet, je travaille sur de multiples travaux, tels que le site web ou le multijoueurs. \\
+Etant chef de projet, j’ai aussi du manager l’équipe. \\
+
+
+\subsection{Travail réalisé}
+\paragraph{~~~~Site internet} \hspace{0pt} \\
+Dès la fin du cahier des charges, je commence le site internet en PHP/HTML et je finalise le système de 
+compte qui permet de s’authentifier sur le site.
+
+Avant la première soutenance, je rajoute rapidement l’onglet ShadowMiner et quelques pages dénués pour 
+le moment de contenu qui seront vite remplis. Je m’empresse de trouver une solution pour héberger le 
+site internet. Aucune offre ne nous correspond. Je trouve donc l’idée du Raspberry pi par hasard et ce fut chose faite.
+
+Après cette soutenance, je rajoute un système d’administration permettant de ne plus toucher directement 
+à la base de données pour rajouter un rapport et je permets possible d’installer le jeu en rajoutant un 
+installateur sur la page de téléchargement. Un système de cache, et des optimisations au niveau du serveur 
+sont ajoutés afin d’améliorer la vitesse de chargement du site internet (cette dernière est divisé par 2).
+
+Avant la deuxième soutenance, je rajoute la possibilité d’éditer son pseudo, qui sera par la suite affiché
+ au-dessus de la tête des joueurs en mode multijoueurs. \\
+
+
+\paragraph{~~~~Les débuts sur Unity} \hspace{0pt}     \\
+Après le cahier des charges, j’ai voulu commencer à travailler sous Unity. Ayant fait le TP bonus sur 
+Unity proposé par les ACDC (et ayant revisionné 5 fois la conférence), j’avais donc une bonne base pour commencer.
+
+J’ai donc créé le premier péfabs : une porte.
+A l’aide d’un assemblage de cube et d’une texture type bois de l’asset store (les mêmes que Antoine), 
+J’ai créé un encadrement puis la porte en elle-même. J’ai rajouté une animation d’ouverture et de fermeture 
+sur la porte et un script qui jouer ces animations lorsqu’un joueur au alentours appuie sur la touche « E ».
+
+J’ai ensuite modélisé la mine vue de l’extérieur sous Unity.
+J’ai ensuite travaillé sur le joueur, j’ai tous d’abord récupéré le modèle 3D des standards assets d’Unity 4.x 
+qui est un mineur (donc génial pour notre projet). J’ai ensuite créé le script en C\# qui permet de déplacer 
+notre joueur aussi bien en première personne qu’en troisième personne. \\
+
+
+\paragraph{~~~~Le multijoueur} \hspace{0pt} \\
+On nous avait conseillé de présenter un début de multijoueur à la première soutenance. 
+Je me suis donc occupé d’intégrer Photon Unity Networking (PUN) au projet.
+Le script nécessaire pour permettre le multijoueur était relativement simple.
+Le multijoueur était donc opérationnel pour la première soutenance mais il souffrait de quelques problèmes :
+-	Les animations n’étaient pas synchronisées,
+-	Les déplacements des autres joueurs n’étaient pas (voire pas du tout) fluide.
+
+Avant la deuxième soutenance, je me suis penché sur ces 2 problèmes.
+Pour les animations, il m’a fallu créer l’Animator Controller des animations du joueur et d’ajouter 
+le composant Photon Animator View qui permet de retransmettre les valeurs des booléen (ou autres variables 
+de l’Animator Controller) sur le réseau et donc de synchroniser les animations. \\
+
+Pour le problème de fluidité, il suffisait de rajouter un composant Photon Transform View et d’utiliser les 
+fonctions Lerp (permet de modifier la position du joueur sans téléportation) de ce composant.
+
+J’en ai profité pour rajouter un système de lobby. Un game est donc créé sur une map multijoueurs choisi 
+aléatoirement entre toutes les maps disponibles. Une game peut donc accueillir 3 joueurs.
+
+Lorsque les 3 joueurs sont réunis, 2 joueurs deviennent des mineurs et le dernier devient le ShadowMiner.
+Tous le monde est ensuite téléporté dans la scène de jeu (il n’y a pas vraiment de changement de scène) et la partie commence.
+
+Après la deuxième soutenance, j’y est rajouté un écran de fin permettant de savoir si on a gagné et le minuteur 
+qui est à 3min au lancement de la partie et j’ai créé 2 autres maps multijoueurs pour rajouter de la diversité à ce mode. \\
+
+
+\paragraph{~~~~Accès au site depuis le jeu} \hspace{0pt} \\
+Afin de rendre opérationnel, les scènes permettant de gérer son compte depuis le jeu créé par Antoine.
+J’ai créé un serveur et un client en C\# communiquant sur le port TCP 4247. Le serveur étant liée à la 
+base de données MySql du site, les changements apportés sur nos comptes sont donc synchronisés avec celles du site internet.
+
+Malheureusement, le serveur, qui se lance au démarrage du Raspberry pi, faisait monter le pourcentage 
+du CPU utilisé au point de ralentir le site internet.
+
+J’ai donc utilisé la commande cpulimit (\url{https://doc.ubuntu-fr.org/cpulimit}) qui permet de donner une 
+limite à un processus et donc de redonner un peu d’air au site internet. \\
+
+
+\paragraph{~~~~Le menu des paramètres} \hspace{0pt} \\
+Dès le début du projet, nous ne voulions pas du menu de démarrage d’Unity (le panneau de configuration avant 
+le lancement du jeu qui permet de modifier les paramètres du jeu), nous l’avons donc désactivé.
+
+Mais un problème s’est posé : comment peut-on modifier les paramètres tels que la qualité des graphismes ou les touches sans ce menu ?
+J’ai donc créé le menu des paramètres qui est composé de 3 panels 
+-	Le panel Graphiques permettant de modifier la fréquence d’affichage, la qualité des graphismes, la résolution 
+	de l’écran ou l’activation du mode plein écran,
+-	Le panel des touches permettant de changer la sensibilité de la souris ou de changer l’assignements des touches pour jouer,
+-	Le panel du son qui permet de modifier le volume sonore.
+A l’aide des PlayersPrefs (Composant permettant de sauvegarder des données après la fermeture du jeu à l’aide de clé) 
+et d’une classe Parametre créé pour l’occasion et d’un petit coup de JSON sur une instance de la classe Parametre, 
+les paramètres sont sauvegardés entre les différentes scènes. \\
+
+
+\paragraph{~~~~La scène de chargement} \hspace{0pt} \\
+On avait remarqué un ralentissement lors du chargement de certaine scène particulièrement lourde, on a donc eu 
+l’idée de créer une scène de chargement qui chargerai les scènes.
+
+A l’aide d’un bon tutoriel trouvé sur internet et de la méthode statique SceneManager.LoadSceneAsyc, cette scène 
+de chargement était opérationnelle. \\
+
+
+\paragraph{~~~~Le menu pause} \hspace{0pt} \\
+Tous les jeux vidéo possèdent un menu pause alors nous devions avoir le nôtre.
+J’ai donc créé un péfabs de ce menu qui est composé de 2 boutons : 
+-	Un bouton « Resume » qui permet de reprendre la partie
+-	Un bouton “Back to menu” qui permet de revenir au menu principal
+Le joueur peut donc mettre en pause le jeu en appuyant sur la touche « ECHAP » de son clavier. \\
+
+
+\paragraph{~~~~Le ShadowMiner} \hspace{0pt} \\
+Après quelques échecs avec les modèles 3D du ShadowMiner que nous avions trouvé pour la première soutenance, 
+j’ai décidé de le remplacer par un monstre vert trouvé sur l’asset store.
+
+J’ai ensuite créé l’Animator Controller de ce modèle 3D afin de permettre possible les animations.
+J’ai ensuite utilisé le composant Nav Mesh Agent afin de rendre nos monstre « intelligent » en mode solo.
+Il peut donc cibler un joueur si ce dernier passe trop près du monstre ou devant ce dernier. Il va ensuite le suivre et le tuer.
+Pour le mode multijoueurs, il nous fallait un monstre jouable.
+Je lui ais donc rajouté un script permettant de la contrôler manuellement.
+C’est ainsi que le multijoueur fût finalisé. \\
+
+
+\paragraph{~~~~Editeur de maps} \hspace{0pt} \\
+Nous avions annoncé un système d’éditeur de map pouvant être créé par les joueurs.
+N’ayant pas le temps de créer un tel système utilisable de façon correcte, nous avons utilisé le projet GILES 
+disponibles sur GitHub (\url{https://github.com/Unity-Technologies/giles}).
+
+De ce fait, nous avons donc sérialisé l’objet obtenu. Ensuite la map sérialisé est envoyé au serveur et peut être 
+jouable par n’importe quel joueur possédant un compte. \\
+
+
+\subsection{Apports personnels}
+\paragraph{} \hspace{0pt}
+Ce projet m’a beaucoup apporté dans 2 domaines : \\
+J’ai appris à gérer une équipe à long terme et a travaillé avec eux. Git nous as bien aidé pour 
+mettre en commun nos travaux malgré quelques merges à résoudre dont nous avions l’habitude au fil du temps.
+L’équipe s’est renforcé et nous faisons du bon travail. \\ 
+
+\paragraph{} \hspace{0pt}
+Sur le plan technique, ce projet m’as permis de découvrir des technologies d’Unity tels que les Nav Mesh Agent 
+pour l’IA ou encore Photon pour le multijoueurs.
+Mais ce projet nous as surtout appris à chercher par nous même les informations manquantes via la documentation 
+très détaillé ou encore via des forums où d’autres personnes ont déjà rencontré nos problèmes. \\
+Grâce à ces 2 points, nous avons gagné en efficacité pour réaliser encore plus de choses. 
+
+
+
+\subsection{Conclusion de Cédric}
+\paragraph{} \hspace{0pt}
+J’ai donc bien assumé mon rôle de chef de projet. J’ai rempli tous mes objectifs et 
+j’en ai même fait plus que prévu. \\
+Je compte continuer à développer ce jeu même après la fin du projet en rajoutant du 
+contenu et en fixant les bugs rapports. \\
 
 
 \newpage
 \section{Clément}
+\subsection{Introduction}
+\paragraph{} \hspace{0pt}
+
+\subsection{Travail réalisé}
+\paragraph{} \hspace{0pt}
+
+\subsection{Apports personnels}
+\paragraph{} \hspace{0pt}
+
+\subsection{Conclusion de Clément}
 \paragraph{} \hspace{0pt}
 
 
 \newpage
 \section{Edgar}
+
+\subsection{Introduction}
+
 \paragraph{} \hspace{0pt}
 Nous sommes en septembre, le projet est annoncé à toute la classe. 
 J’étais déjà particulièrement enthousiaste avant, je connaissais l’existence du projet. 
@@ -421,6 +646,7 @@ Cédric propose une idée de jeu style Battle Royale, ce qui est particulièreme
 partie de mes idées, je trouvais cette idée excellente, selon moi c’était la meilleure idée, 
 l’idée de Shadow Miner était née. \\
 
+\subsection{Travail réalisé}
 
 \paragraph{} \hspace{0pt}
 Notre aventure commence, le cahier des charges se fait dans les temps avec nos idées, nous faisons une 
@@ -448,7 +674,7 @@ avoir un homme vraiment réaliste qui ressemble à quelque chose, je devais sûr
 considérable peut-être 10 fois plus que ce que j’avais mis dans la création de ce personnage en 3D. 
 J’ai appris comment modélisé en 3D et cela m’intéressé donc j’étais content et heureux de l’avoir fait. 
 Néanmoins le travail fourni ne correspondait pas aux attentes de mes camarades en effet il était particulièrement 
-laid. \\
+laid. \\ \\
 C’était sûrement trop dur de créer un monstre 
 ou un mineur donc nous sommes partis chercher des personnages de mineur et de monstres sur Internet dans des 
 banques de données. Un camarade m’avez parlé du site Mixamo, je crois avoir passé quelques heures sur ce site 
@@ -459,7 +685,7 @@ Quelques jours avant la première soutenance j’ai commencé utiliser Unity sur
 Bien évidemment mes connaissances et mes compétences sur ce logiciel était totalement en retard par rapport à mes 
 camarades même si j’ai essayé de rattraper tant bien que mal ce retard. J’ai essayé de modéliser certaines 
 choses sur Blender tels que des roches des amas de roches, en fait tout était déjà fait mais aujourd’hui, 
-j’ai appris à le faire et c’est cela le plus important. \\
+j’ai appris à le faire et c’est cela le plus important. \\ \\
 La première soutenance approchait à grands pas, 
 la veille (et toute la nuit) Cédric et Clement ont fait un travail exceptionnel que je me permet de souligner car ils ont œuvraient 
 comme des chefs pour obtenir un très bon résultat. \\
@@ -472,7 +698,7 @@ des sons ou aller en prendre sur des banques de données en ligne, pouvoir les m
 musique de fond qui était bien pour le jeu. Tout l’aspect sonore et audio du projet était sûrement 
 la chose qui m’intéressait le plus. Pendant quelques jours j’ai cherché des sons qui était idéaux pour le jeu, 
 comme le bruit d’un éboulement de cailloux dans la mine, le cri du monstre les bruits de pas, les bruits de pas 
-quand le mineur court. \\
+quand le mineur court. \\ \\
 J’ai vrai une dernière chose sur leçon 
 qui était les musiques de fond. Lors de la première soutenance pour montrer que nous pouvions mettre de la 
 musique nous avions mis une musique qui rendait bien mais qui était particulièrement énervante au bout de 30 secondes 
@@ -482,14 +708,14 @@ qui collait parfaitement mange avec certains temps plutôt calme avec du piano, 
 avec des cuivres et des violons qui peuvent très bien rendre le jeu plus vivant. J’ai découpé la musique en 
 quelques parties évidemment, je garde l’original précieusement. L’aspect musical et sonore du jeu m’a fait 
 comprendre à quel point le son est important dans un jeu l’immersion est beaucoup plus présente, grâce à 
-cette musique le jeu en devient plus puissant et c’est une excellente chose pour nous. \\
+cette musique le jeu en devient plus puissant et c’est une excellente chose pour nous. \\ \\
 Cette Fois-ci nous avons vraiment bien travaillé bien communiquer nous avions un travail qui était bon à mes yeux 
 le rapport et le plan de soutenance a été fait dans les temps, nous n’avions pas de retard. J’ai fait aussi avec 
 Antoine le PowerPoint de la présentation puis nous l’avons tous un peu modifié et cette fois-ci nous étions vraiment 
 prêt et préparer pour la deuxième soutenance et elle s’est très bien passé. Nous avons pu montrer le fruit de notre 
 travail notre projet n’était pas encore terminé mais vu le travail déjà accompli nous étions plutôt fier. \\
 
-
+\subsection{Conclusion d'Edgar}
 \paragraph{} \hspace{0pt}
 Et aujourd’hui nous écrivons notre rapport de projet cela nous rappelle et remémore des souvenirs de travail et 
 de groupe certains moments furent stressant comme la préparation avant les soutenances
@@ -498,12 +724,12 @@ ACCEr a fait son projet avec envie à mes yeux, en tout cas c’est mon cas je s
 j’ai appris plein de choses très intéressantes pas forcément sur le plan informatique mais aussi sur le plan 
 personnel j’ai appris à communiquer dans un groupe que je ne connaissais que très peu aujourd’hui j’aime 
 travailler avec ses trois messieurs qui m’entourent. Nous espérons avoir fait un travail qui peut convenir 
-au jury et nous espérons aussi à répondre à leurs attentes. \\
+au jury et nous espérons aussi à répondre à leurs attentes. \\ \\ \\
 
-
-\newpage
-\section{Conclusion}
+\section*{Conclusion}
 \paragraph{} \hspace{0pt}
+Nous pouvons donc conclure que chacun a remplis ses objectifs.
+Ce projet nous a beaucoup à apporter et nous as appris à travailler en groupe et faire fâce à certains aléas.
 
 
 %################### Réalisation individuelle
@@ -536,6 +762,9 @@ Voici aussi les sources des musique et des effets sonores du jeu : \\
 \paragraph{} \hspace{0pt}
 Pour réaliser ce projet, nous avons dû coder dans plusieurs langages : 
 {\begin{itemize}
+	\item Unity3D, pour le moteur de jeu,
+	\item Photon Unity Networking afin de mettre en place le mode multijoueurs,
+	\item Git et Github afin de mettre en commum notre travail,
 	\item C\# pour le jeu, 
 	\item HTML, CSS, JavaScript, PHP, MYSQL pour le site internet,
 	\item \LaTeX ~ pour les rapports. \\
@@ -556,28 +785,45 @@ Nous remercions aussi Nicolas Masciocchi de nous avoir gentimment autorisé à u
 
 \newpage
 
-%################### Quelques images du jeu
-
-\fancypagestyle{plain}{}
-\stepcounter{chapter}
-\part{Quelques images du jeu}
-
-
-%################### Quelques images du jeu
-
-\newpage
-
 %################### Conclusion
 
 \fancypagestyle{plain}{}
 \stepcounter{chapter}
 \part{Conclusion}
 \paragraph{} \hspace{0pt}
-Conclusion
+Après la création du groupe ACCEr, nous nous sommes rapidement mis d’accord sur un jeu 
+d’horreur dans une mine : ShadowMiner. \\
+
+\paragraph{} \hspace{0pt}
+Ce projet nous a forcé à travailler dur pour atteindre nos objectifs et nous as appris à 
+travailler en groupe et à utiliser des technologies dont nous ne connaissions pas pour la 
+plupart l’existence avant le début du projet. \\
+
+\paragraph{} \hspace{0pt}
+Notre groupe étant soudé, nous avons pu remplir les objectifs annoncés dans le cahier des 
+charges de janvier et ainsi permettre la sortie officielle du jeu ShadowMiner. \\
+
+\paragraph{} \hspace{0pt}
+Cependant, nous n’allons nous arrêter ici. Nous allons continuer de fixer les bugs 
+et de rajouter du contenu. \\
+
 
 %################### Conclusion
 
 \newpage
+
+\newpage
+
+%################### Annexe
+
+\fancypagestyle{plain}{}
+\stepcounter{chapter}
+\part{Annexe}
+\paragraph{} \hspace{0pt}
+Voici quelques images du jeu : \\ \\
+
+
+%################### Annexe
 
 %################### Glossaire
 
