@@ -5,8 +5,6 @@ print("")
 os.system("pdflatex rapport.tex")
 os.system("pdflatex rapport.tex")
 os.system("pdflatex rapport.tex")
-os.system("pdflatex rapport.tex")
-
 
 print("")
 print("      Clean directory")

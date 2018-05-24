@@ -270,8 +270,21 @@ Un classement des meilleurs joueurs est d’ailleurs disponible sur le site inte
 \subsection[Hébergement]{~~~~Hébergement}
 \paragraph*{} \hspace{0pt} \\
 L'adresse du site internet est \url{https://accer.ddns.net}. \\
-Il est hébergé à Strasbourg chez Cédric sur un Raspberry pi modèle 3B+. \\
+Il est hébergé à Strasbourg chez Cédric sur un Raspberry Pi modèle 3B+. \\
 L’accès au site est assuré par un élastique qui maintient le câble Ethernet relié au Raspberry pi. \\
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.25]{images/website_accueil.png}
+  \caption{L'accueil du site internet}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.06]{images/website_rpi.jpg}
+  \caption{Le Raspberry Pi}
+\end{figure}
+
+\newpage
 
 \subsection[Compte]{~~~~Compte}
 \paragraph*{} \hspace{0pt} \\
@@ -327,7 +340,13 @@ niveaux. Elles ont été établies lors de la rédaction du cahier des charges d
 \paragraph*{} \hspace{0pt} 
 Pour débuter le projet j'ai commencé par construire des préfabs. Le tout premier
 objet que j'ai utilisé est un cube 3D. En le dupliquant puis en assemblant ses
-copies j'ai construit un mur en pierre. Ce fut le début de l'ère des préfabs. \\@(\# antoine\_mur.png \#)\@  \\
+copies j'ai construit un mur en pierre. Ce fut le début de l'ère des préfabs. 
+\begin{wrapfigure}{h!}{7cm}
+  \centering
+  \includegraphics[width=7cm]{images/antoine_mur.png}
+  \caption{Le mur}
+\end{wrapfigure}
+\\
 Je construisis dans la foulée une table en bois. Les textures (bois et pierre)
 proviennent d'un package gratuit de l'« asset-store ». Nous nous sommes ensuite
 mis d'accord avec le groupe au sujet de cette plateforme : nous utiliserons le
@@ -339,8 +358,15 @@ anciens élèves de 1ère année à EPITA nous avaient conseillés d'en abuser, 
 particules plaisent beaucoup aux professeurs. Mythe ou réalité ? Quoi qu'il en soit,
 nous avons trouvé les flammes réussies et je m'en suis donc servi pour
 confectionner des torches et des lanternes. J'avais donc respecté l'accord vis à vis
-du contenu prémâché de l' «asset-store » d 'Unity3D. \@(\# antoine\_mineurtorche.png \#)\@ \\
+du contenu prémâché de l' «asset-store » d 'Unity3D. 
 
+\newpage
+
+\begin{wrapfigure}{h!}{7cm}
+  \centering
+  \includegraphics[width=7cm]{images/antoine_mineurtorche.png}
+  \caption{La torche et le mineur}
+\end{wrapfigure}
 
 \paragraph*{} \hspace{0pt} 
 Je continuais à le respecter en installant Blender. Ce logiciel m'a servi à créer des
@@ -361,8 +387,13 @@ niveau commence dans un couloir peu éclairé (avec les murs construits
 précédemment et quelques torches). Au bout du couloir sur la gauche, on trouve un
 escalier condamné qui représente l'accès au niveau suivant. Le joueur doit donc
 continuer à droite et après quelques pas, il se trouvera devant un énorme cratère
-qui constitue la zone de minage. \@(\# antoine\_cratere.png \#)\@   \\
-
+qui constitue la zone de minage. 
+\begin{wrapfigure}{h!}{7cm}
+  \centering
+  \includegraphics[width=7cm]{images/antoine_cratere.png}
+  \caption{La zone de minage}
+\end{wrapfigure}
+\\
 
 \paragraph*{} \hspace{0pt} 
 Fin avril, la création d'autres niveaux commença. Je construisis un niveau avec un
@@ -385,21 +416,32 @@ Le couloir comporte devant une porte qui cache les toilettes. Il continue jusqu'
 la salle de détente avec tables, étagères, tabourets et un jukebox. Le jukebox
 permet d'activer/désactiver la musique ambiante. Après cette salle, le couloir
 reprend et se termine dans un espace de minage avec des cagettes de pépites
-d'or et des murs pleins de minerais. \@(\# antoine\_pepite.png \#)\@   \\
-
+d'or et des murs pleins de minerais. 
+\begin{wrapfigure}{h!}{7cm}
+  \centering
+  \includegraphics[width=7cm]{images/antoine_pepite.png}
+  \caption{Les pépites}
+\end{wrapfigure}
+\\
 
 \paragraph*{} \hspace{0pt} 
 Dans le même temps, j'ai commencé la réalisation d'un niveau pour le mode
 multijoueurs. Le plan du niveau a été réalisé sur Paint (logiciel de dessin) et ce
 niveau contient un labyrinthe, des faux murs (qui se comportent comme des
 portes), des passages sous-terrains et un pont tournant. \\
-
-
+ 
 \paragraph*{} \hspace{0pt} 
 Pour le menu du jeu, j'ai d'abord assemblé boutons et textes pour créer une
 interface de connexion au serveur, puis d'inscription. J'ai ensuite repris la première
 scène du choix des niveaux (avec les trois boutons rappelez-vous) et j'ai rajouté
-les 17 autres niveaux (les clones du niveau modèle).\@(\# antoine\_choixniveau.png \#)\@
+les 17 autres niveaux (les clones du niveau modèle). 
+\newpage
+\begin{wrapfigure}{l}{7cm}
+  \centering
+  \includegraphics[width=7cm]{images/antoine_choixniveau.png}
+  \caption{Le menu des niveaux solo}
+\end{wrapfigure}
+
 Cédric, étant responsable de la création du site internet \url{https://accer.ddns.net}, 
 m'a aidé à utiliser le script qu'il avait créé permettant 
 d'échanger des données avec le serveur et d'autres aspects du menu. Ainsi le script prend
@@ -407,8 +449,13 @@ en paramètre une liste des niveaux et des boutons et charge la scène adaptée
 lorsqu'on clique sur un des boutons. Nous avons aussi créé la scène « mon
 profil » qui permet à l'utilisateur d'accéder aux informations de son compte
 (prénom, nom, adresse mail, mot de passe, description et pseudo) et de les
-modifier. \@(\# antoine\_myaccount.png \#)\@ \\
-
+modifier. 
+\begin{wrapfigure}{h!}{7cm}
+  \centering
+  \includegraphics[width=7cm]{images/antoine_myaccount.png}
+  \caption{Le menu des comptes}
+\end{wrapfigure}
+\\
 
 \paragraph*{} \hspace{0pt} 
 Pour terminer, ma dernière contribution au projet (avant la soutenance finale car je
