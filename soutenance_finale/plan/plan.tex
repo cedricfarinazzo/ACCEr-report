@@ -1,0 +1,59 @@
+\documentclass[A4paper,11pt]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% Détection de pdflatex
+\ifx\pdfcompresslevel\undefined
+
+%% Si on fait un postscript
+\typeout{Postscript version}
+\usepackage[dvips]{graphicx}
+\DeclareGraphicsExtensions{.eps} \else
+
+%% Si on fait un PDF
+\typeout{PDF version}
+\usepackage{ae}
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.pdf} \fi
+
+%% G-H-D-B-Entête-Entête/texte-Hauteur du bas de page-Bas de page texte
+\usepackage{colortbl}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{multirow}
+\definecolor{gris}{gray}{0.8}
+\newcommand{\interRubrique}{\bigskip}
+\textwidth = 440pt      %% Largeur normale du texte
+\textheight = 600pt     %% Hauteur normale du texte
+\oddsidemargin = 10pt   %% Marge de gauche
+\topmargin = 10pt        %% Marge du haut
+%\headsep = 0pt          %% Marge du haut
+%\footskip = 50pt        %%
+%\hoffset = 0pt          %%
+%\paperwidth = 597pt     %%
+\title{\begin{Huge}Plan de Dernière Soutenance\end{Huge}}
+\begin{document}
+\date{}
+
+\maketitle
+\begin{center}
+%\includegraphics{faster.jpg}
+
+\begin{tabular}{|c|c|}
+\hline Antoine CLAUDEL & Cédric FARINAZZO \\
+\hline Clément LANGUERRE & Edgar GRIZZI \\
+\hline
+\multicolumn{2}{c}{} \\
+\multicolumn{2}{c}{} \\
+\end{tabular}\\
+\end{center}
+\section{Le jeu : ShadowMiner}
+\section{Le son}
+\section{Les scripts C\#}
+\section{Unity}
+\section{L'évolution des personnages}
+\section{Installation et Désinstallation}
+\section{Démonstration}
+
+\end{document}
